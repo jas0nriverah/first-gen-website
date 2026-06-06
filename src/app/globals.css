@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-gt-navy antialiased;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    @apply bg-tech-gold/30 text-gt-navy;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .card {
+    @apply rounded-2xl border border-gt-navy/[0.06] bg-white/80 p-6 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-tech-gold/25 hover:shadow-lift sm:p-8;
+  }
+
+  .card-static {
+    @apply rounded-2xl border border-gt-navy/[0.06] bg-white/80 p-6 shadow-card backdrop-blur-sm sm:p-8;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-tech-gold/25 bg-tech-gold/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-gt-navy;
+  }
+
+  .badge-soon {
+    @apply inline-flex items-center rounded-full bg-gt-navy/[0.06] px-3 py-1 text-xs font-medium text-warm-gray-light;
+  }
+
+  .gold-line {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-tech-gold/50 to-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-tech-gold via-tech-gold-light to-tech-gold bg-clip-text text-transparent;
+  }
+
+  .glass-nav {
+    @apply border-b border-gt-navy/[0.06] bg-cream/80 backdrop-blur-xl backdrop-saturate-150;
+  }
+
+  .link-bio-btn {
+    @apply rounded-2xl border border-gt-navy/10 bg-white/90 px-5 py-4 text-center font-semibold text-gt-navy shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-tech-gold/40 hover:shadow-lift;
+  }
+
+  .link-bio-btn-primary {
+    @apply rounded-2xl bg-navy-gradient px-5 py-4 text-center font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift;
+  }
+}
