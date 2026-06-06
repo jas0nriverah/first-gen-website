@@ -11,7 +11,7 @@ export function DecorativeBackground({ variant = "hero" }: DecorativeBackgroundP
       <div
         className={`absolute inset-0 ${variant === "hero" ? "opacity-40" : "opacity-25"}`}
         style={{
-          backgroundImage: `radial-gradient(circle, #E5E5E5 1px, transparent 1px)`,
+          backgroundImage: "radial-gradient(circle, var(--color-dot-grid) 1px, transparent 1px)",
           backgroundSize: variant === "hero" ? "24px 24px" : "32px 32px",
         }}
       />

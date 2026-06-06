@@ -22,7 +22,7 @@ export function PlaceholderImage({
       aria-label={label}
     >
       <div className="px-6 text-center">
-        <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white">
+        <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-card">
           <svg
             className="h-5 w-5 text-muted-light"
             fill="none"

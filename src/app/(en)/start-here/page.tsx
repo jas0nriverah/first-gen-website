@@ -33,9 +33,9 @@ export default function StartHerePage() {
             ))}
           </div>
 
-          <div className="mt-14 rounded-2xl bg-ink p-10 text-center text-white sm:p-12">
+          <div className="cta-inverse mt-14">
             <h3 className="text-xl font-bold sm:text-2xl">Still have questions?</h3>
-            <p className="mx-auto mt-3 max-w-md text-sm text-neutral-400">
+            <p className="mx-auto mt-3 max-w-md text-sm text-footer-muted">
               I&apos;m happy to help point you in the right direction. Reach out anytime.
             </p>
             <div className="mt-8">

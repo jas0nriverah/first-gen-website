@@ -18,7 +18,7 @@ export default function ResourcesPage() {
 
       <div className="section-padding bg-surface-warm">
         <div className="section-container">
-          <div className="mb-8 rounded-xl border border-border bg-white p-4">
+          <div className="mb-8 rounded-xl border border-border bg-card p-4">
             <p className="text-sm text-muted">
               <span className="badge-soon mr-2">Coming Soon</span>
               Placeholder items will be replaced with real links as resources are finalized.

@@ -249,7 +249,11 @@ These items are placeholders until Stacy provides the real versions:
 - Accent (coral): `#FF5C35`
 - Footer: black `#0A0A0A`
 
-These are set in `tailwind.config.ts` if you ever need to adjust them.
+These are set in `src/app/globals.css` (as CSS variables) and `tailwind.config.ts` if you ever need to adjust them.
+
+### Light / dark mode
+
+Visitors can switch themes using the **moon/sun button** in the header (or top-right on the `/links` page). The choice is saved in the browser and remembered on the next visit. If no choice is saved, the site follows the device’s system setting.
 
 ---
 

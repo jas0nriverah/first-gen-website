@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { navLinksEn, navLinksEs, siteConfig } from "@/lib/site-data";
+import { ThemeToggle } from "./ThemeToggle";
 
 type HeaderProps = {
   locale?: "en" | "es";
@@ -16,7 +17,7 @@ export function Header({ locale = "en" }: HeaderProps) {
   const altLocaleLabel = locale === "es" ? "EN" : "ES";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 border-b border-border bg-header-bg backdrop-blur-lg">
       <div className="section-container">
         <div className="flex h-14 items-center justify-between sm:h-16">
           <Link
@@ -27,41 +28,45 @@ export function Header({ locale = "en" }: HeaderProps) {
             {siteConfig.name}
           </Link>
 
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
-            {navLinks.map((link) => (
+          <div className="flex items-center gap-2">
+            <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-md px-3 py-2 text-sm text-muted transition-colors hover:text-ink"
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-md px-3 py-2 text-sm text-muted transition-colors hover:text-ink"
+                href={altLocaleHref}
+                className="ml-2 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:border-border-dark"
               >
-                {link.label}
+                {altLocaleLabel}
               </Link>
-            ))}
-            <Link
-              href={altLocaleHref}
-              className="ml-3 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:border-ink"
-            >
-              {altLocaleLabel}
-            </Link>
-          </nav>
+            </nav>
 
-          <button
-            type="button"
-            className="rounded-md p-2 text-ink lg:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-expanded={menuOpen}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-          >
-            {menuOpen ? (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            )}
-          </button>
+            <ThemeToggle />
+
+            <button
+              type="button"
+              className="rounded-md p-2 text-ink lg:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-expanded={menuOpen}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+            >
+              {menuOpen ? (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {menuOpen && (

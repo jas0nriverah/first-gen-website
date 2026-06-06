@@ -3,12 +3,68 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-page: #ffffff;
+    --color-card: #ffffff;
+    --color-text: #0a0a0a;
+    --color-text-soft: #262626;
+    --color-muted: #737373;
+    --color-muted-light: #a3a3a3;
+    --color-surface: #f5f5f5;
+    --color-surface-warm: #fafafa;
+    --color-border: #e5e5e5;
+    --color-border-dark: #d4d4d4;
+    --color-accent: #ff5c35;
+    --color-accent-soft: #ff7a5c;
+    --color-accent-muted: #fff0eb;
+    --color-inverse: #0a0a0a;
+    --color-inverse-text: #ffffff;
+    --color-footer-muted: #a3a3a3;
+    --color-footer-subtle: #737373;
+    --color-btn-primary: #0a0a0a;
+    --color-btn-primary-hover: #262626;
+    --color-btn-primary-text: #ffffff;
+    --color-header-bg: rgba(255, 255, 255, 0.8);
+    --color-dot-grid: #e5e5e5;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark {
+    --color-page: #0a0a0a;
+    --color-card: #141414;
+    --color-text: #f5f5f5;
+    --color-text-soft: #e5e5e5;
+    --color-muted: #a3a3a3;
+    --color-muted-light: #737373;
+    --color-surface: #1a1a1a;
+    --color-surface-warm: #111111;
+    --color-border: #262626;
+    --color-border-dark: #404040;
+    --color-accent: #ff6b4a;
+    --color-accent-soft: #ff8a6b;
+    --color-accent-muted: #2a1a15;
+    --color-inverse: #1a1a1a;
+    --color-inverse-text: #f5f5f5;
+    --color-footer-muted: #a3a3a3;
+    --color-footer-subtle: #525252;
+    --color-btn-primary: #f5f5f5;
+    --color-btn-primary-hover: #e5e5e5;
+    --color-btn-primary-text: #0a0a0a;
+    --color-header-bg: rgba(10, 10, 10, 0.85);
+    --color-dot-grid: #262626;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-white text-ink antialiased;
+    @apply bg-page text-ink antialiased transition-colors duration-200;
   }
 
   ::selection {
@@ -26,11 +82,11 @@
   }
 
   .card {
-    @apply rounded-2xl border border-border bg-white p-6 transition-all duration-200 hover:border-border-dark hover:shadow-hover sm:p-7;
+    @apply rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:border-border-dark hover:shadow-hover sm:p-7;
   }
 
   .card-static {
-    @apply rounded-2xl border border-border bg-white p-6 sm:p-7;
+    @apply rounded-2xl border border-border bg-card p-6 sm:p-7;
   }
 
   .badge {
@@ -46,10 +102,14 @@
   }
 
   .link-bio-btn {
-    @apply rounded-xl border border-border bg-white px-5 py-4 text-center text-sm font-medium text-ink transition-all duration-200 hover:border-ink hover:shadow-hover;
+    @apply rounded-xl border border-border bg-card px-5 py-4 text-center text-sm font-medium text-ink transition-all duration-200 hover:border-border-dark hover:shadow-hover;
   }
 
   .link-bio-btn-primary {
-    @apply rounded-xl bg-ink px-5 py-4 text-center text-sm font-medium text-white transition-all duration-200 hover:bg-ink-soft;
+    @apply rounded-xl bg-btn-primary px-5 py-4 text-center text-sm font-medium text-btn-primary-text transition-all duration-200 hover:bg-btn-primary-hover;
+  }
+
+  .cta-inverse {
+    @apply rounded-2xl bg-inverse p-10 text-center text-inverse-foreground sm:p-12;
   }
 }

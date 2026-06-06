@@ -13,20 +13,20 @@ export function Footer({ locale = "en" }: FooterProps) {
   const altLabel = locale === "es" ? "English" : "Español";
 
   return (
-    <footer className="border-t border-border bg-ink text-white">
+    <footer className="border-t border-border bg-inverse text-inverse-foreground">
       <div className="section-container py-16 sm:py-20">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href={homeHref} className="text-base font-semibold text-white">
+            <Link href={homeHref} className="text-base font-semibold text-inverse-foreground">
               {siteConfig.name}
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-footer-muted">
               {content.mission}
             </p>
           </div>
 
           <div>
-            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-neutral-500">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-footer-subtle">
               {content.quickLinksTitle}
             </h3>
             <ul className="space-y-2">
@@ -34,7 +34,7 @@ export function Footer({ locale = "en" }: FooterProps) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 transition-colors hover:text-white"
+                    className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
                   >
                     {link.label}
                   </Link>
@@ -43,7 +43,7 @@ export function Footer({ locale = "en" }: FooterProps) {
               <li>
                 <Link
                   href="/links"
-                  className="text-sm text-neutral-400 transition-colors hover:text-white"
+                  className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
                 >
                   {locale === "es" ? "Enlaces" : "Link in Bio"}
                 </Link>
@@ -52,19 +52,22 @@ export function Footer({ locale = "en" }: FooterProps) {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-neutral-500">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-footer-subtle">
               {content.languageTitle}
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm text-neutral-400 transition-colors hover:text-white">
+                <Link
+                  href="/"
+                  className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
+                >
                   English
                 </Link>
               </li>
               <li>
                 <Link
                   href="/bienvenidos"
-                  className="text-sm text-neutral-400 transition-colors hover:text-white"
+                  className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
                 >
                   Español
                 </Link>
@@ -81,20 +84,20 @@ export function Footer({ locale = "en" }: FooterProps) {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-neutral-500">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-footer-subtle">
               {content.contactTitle}
             </h3>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="text-sm text-neutral-400 transition-colors hover:text-white"
+              className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
             >
               {siteConfig.email}
             </a>
-            <p className="mt-6 text-xs text-neutral-600">{content.credit}</p>
+            <p className="mt-6 text-xs text-footer-subtle">{content.credit}</p>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-neutral-800 pt-8 text-center text-xs text-neutral-600">
+        <div className="mt-12 border-t border-border pt-8 text-center text-xs text-footer-subtle">
           © {new Date().getFullYear()} {siteConfig.name}. {content.credit}.
         </div>
       </div>

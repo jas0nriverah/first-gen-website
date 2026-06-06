@@ -35,9 +35,9 @@ export default function ComienzaAquiPage() {
             ))}
           </div>
 
-          <div className="mt-14 rounded-2xl bg-ink p-10 text-center text-white sm:p-12">
+          <div className="cta-inverse mt-14">
             <h3 className="text-xl font-bold sm:text-2xl">¿Aún tienes preguntas?</h3>
-            <p className="mx-auto mt-3 max-w-md text-sm text-neutral-400">
+            <p className="mx-auto mt-3 max-w-md text-sm text-footer-muted">
               Con gusto te ayudo a orientarte. Escríbeme cuando quieras.
             </p>
             <div className="mt-8">
