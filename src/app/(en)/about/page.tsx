@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { PageHero } from "@/components/PageHero";
 import { Button } from "@/components/Button";
@@ -15,6 +16,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero title={content.pageTitle} subtitle={content.headline} />
+      <Breadcrumbs items={[{ label: "About" }]} locale="en" />
 
       <div className="section-padding">
         <div className="section-container">

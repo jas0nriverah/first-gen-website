@@ -424,6 +424,95 @@ export const resourceCategories = {
   ] as ResourceCategory[],
 };
 
+// ─── RESOURCE FILTERS (Resources page UX) ──────────────────────────────────────
+// Maps each category id to audience tags used for filtering on the Resources page.
+
+export type ResourceAudience = "high-school" | "college" | "families" | "pre-med";
+
+export const resourceFilters = {
+  en: [
+    { id: "all", label: "All" },
+    { id: "high-school", label: "High School" },
+    { id: "college", label: "College" },
+    { id: "families", label: "Families" },
+    { id: "pre-med", label: "Pre-Med" },
+  ],
+  es: [
+    { id: "all", label: "Todos" },
+    { id: "high-school", label: "Secundaria" },
+    { id: "college", label: "Universidad" },
+    { id: "families", label: "Familias" },
+    { id: "pre-med", label: "Pre-Medicina" },
+  ],
+};
+
+export const categoryAudiences: Record<string, ResourceAudience[]> = {
+  "college-applications": ["high-school"],
+  essays: ["high-school"],
+  scholarships: ["high-school", "college"],
+  fafsa: ["high-school", "college", "families"],
+  "dual-enrollment": ["high-school"],
+  opportunities: ["high-school", "college"],
+  research: ["college", "pre-med"],
+  "pre-med": ["pre-med"],
+  "study-skills": ["college"],
+  families: ["families"],
+  solicitudes: ["high-school"],
+  ensayos: ["high-school"],
+  becas: ["high-school", "college"],
+  oportunidades: ["high-school", "college"],
+  investigacion: ["college", "pre-med"],
+  "pre-medicina": ["pre-med"],
+  estudio: ["college"],
+  familias: ["families"],
+};
+
+// ─── FAMILY CALLOUT (Home page) ────────────────────────────────────────────────
+
+export const familyCallout = {
+  en: {
+    title: "For parents & Spanish-speaking families",
+    text: "Clear guidance in English and Spanish — so you can support your student without translating everything alone.",
+    cta: "Family resources",
+    href: "/resources#families",
+  },
+  es: {
+    title: "Para padres y familias hispanohablantes",
+    text: "Orientación clara en inglés y español — para que puedas apoyar a tu estudiante sin tener que traducir todo solo/a.",
+    cta: "Recursos para familias",
+    href: "/es/recursos#familias",
+  },
+};
+
+// ─── UX LABELS (shared component copy) ─────────────────────────────────────────
+
+export const uxLabels = {
+  en: {
+    skipToContent: "Skip to content",
+    startHereFab: "Start here",
+    searchResources: "Search resources…",
+    jumpTo: "Jump to",
+    noResults: "No resources match your search. Try a different filter or keyword.",
+    comingSoonNote: "Placeholder items will be replaced with real links as resources are finalized.",
+    notFoundTitle: "Page not found",
+    notFoundText: "This page doesn't exist — but you're not lost. Start here instead.",
+    notFoundCta: "Go home",
+    breadcrumbHome: "Home",
+  },
+  es: {
+    skipToContent: "Saltar al contenido",
+    startHereFab: "Comienza aquí",
+    searchResources: "Buscar recursos…",
+    jumpTo: "Ir a",
+    noResults: "No hay recursos que coincidan. Prueba otro filtro o palabra clave.",
+    comingSoonNote: "Los marcadores de posición serán reemplazados con enlaces reales cuando los recursos estén listos.",
+    notFoundTitle: "Página no encontrada",
+    notFoundText: "Esta página no existe — pero no estás perdido/a. Comienza aquí.",
+    notFoundCta: "Ir al inicio",
+    breadcrumbHome: "Inicio",
+  },
+};
+
 // ─── BLOG / CHRONICLES (Coming Soon) ───────────────────────────────────────────
 // Add new posts here. Set comingSoon: false and add slug when ready to publish.
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { ResourceCategoryCard } from "@/components/ResourceCategoryCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
+import { ResourcesExplorer } from "@/components/ResourcesExplorer";
 import { resourceCategories } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -16,26 +17,10 @@ export default function RecursosPage() {
         title="Recursos"
         subtitle="Guías organizadas y enlaces para ayudarte a navegar la escuela, la universidad y más allá."
       />
+      <Breadcrumbs items={[{ label: "Recursos" }]} locale="es" />
 
       <div className="section-padding bg-surface-warm">
-        <div className="section-container">
-          <div className="mb-8 rounded-xl border border-border bg-card p-4">
-            <p className="text-sm text-muted">
-              <span className="badge-soon mr-2">Próximamente</span>
-              Los marcadores de posición serán reemplazados con enlaces reales cuando los recursos estén listos.
-            </p>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-2">
-            {resourceCategories.es.map((category) => (
-              <ResourceCategoryCard
-                key={category.id}
-                category={category}
-                comingSoonLabel="Próximamente"
-              />
-            ))}
-          </div>
-        </div>
+        <ResourcesExplorer categories={resourceCategories.es} locale="es" />
       </div>
     </>
   );

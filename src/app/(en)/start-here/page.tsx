@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PathwayCard } from "@/components/PathwayCard";
 import { PageHero } from "@/components/PageHero";
+import { StartHereNav } from "@/components/StartHereNav";
 import { Button } from "@/components/Button";
 import { pathways } from "@/lib/site-data";
 
@@ -16,6 +18,8 @@ export default function StartHerePage() {
         title="Start Here"
         subtitle="Not sure where to begin? Choose the pathway that matches where you are — or where you want to go."
       />
+      <Breadcrumbs items={[{ label: "Start Here" }]} locale="en" />
+      <StartHereNav locale="en" />
 
       <div className="section-padding">
         <div className="section-container">

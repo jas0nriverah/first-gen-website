@@ -1,5 +1,6 @@
 import { BilingualBanner } from "@/components/BilingualBanner";
 import { Button } from "@/components/Button";
+import { FamilyCallout } from "@/components/FamilyCallout";
 import { Hero } from "@/components/Hero";
 import { PathwayCard } from "@/components/PathwayCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -18,6 +19,8 @@ export default function HomePage() {
         ctaAbout={content.ctaAbout}
         ctaContact={content.ctaContact}
       />
+
+      <FamilyCallout locale="en" />
 
       <section className="section-padding">
         <div className="section-container">

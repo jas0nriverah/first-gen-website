@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BlogPostCard } from "@/components/BlogPostCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { blogPosts } from "@/lib/site-data";
 
@@ -16,6 +17,7 @@ export default function CronicasPage() {
         title="Crónicas"
         subtitle="Historias personales, lecciones aprendidas y consejos de mi camino como estudiante de primera generación."
       />
+      <Breadcrumbs items={[{ label: "Crónicas" }]} locale="es" />
 
       <div className="section-padding">
         <div className="section-container">

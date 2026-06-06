@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PathwayCard } from "@/components/PathwayCard";
 import { PageHero } from "@/components/PageHero";
+import { StartHereNav } from "@/components/StartHereNav";
 import { Button } from "@/components/Button";
 import { pathways } from "@/lib/site-data";
 
@@ -17,6 +19,8 @@ export default function ComienzaAquiPage() {
         title="Comienza Aquí"
         subtitle="¿No sabes por dónde empezar? Elige el camino que coincida con donde estás — o hacia dónde quieres ir."
       />
+      <Breadcrumbs items={[{ label: "Comienza Aquí" }]} locale="es" />
+      <StartHereNav locale="es" />
 
       <div className="section-padding">
         <div className="section-container">

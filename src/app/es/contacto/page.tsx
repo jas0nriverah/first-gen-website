@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { Button } from "@/components/Button";
 import { contactContent, siteConfig } from "@/lib/site-data";
@@ -15,6 +16,7 @@ export default function ContactoPage() {
   return (
     <>
       <PageHero title={content.pageTitle} subtitle={content.intro} />
+      <Breadcrumbs items={[{ label: "Contacto" }]} locale="es" />
 
       <div className="section-padding">
         <div className="section-container">
