@@ -21,12 +21,12 @@ export default function HomePage() {
 
       <section className="section-padding">
         <div className="section-container">
-          <SectionHeading title={content.introTitle} eyebrow="Our Mission" />
-          <div className="mx-auto max-w-3xl space-y-5">
+          <SectionHeading title={content.introTitle} eyebrow="Our mission" />
+          <div className="mx-auto max-w-2xl space-y-5">
             {content.introParagraphs.map((paragraph, i) => (
               <p
                 key={paragraph.slice(0, 40)}
-                className={`text-lg leading-relaxed text-warm-gray ${i === 0 ? "font-display text-xl text-gt-navy sm:text-2xl" : ""}`}
+                className={`leading-relaxed ${i === 0 ? "text-lg font-medium text-ink sm:text-xl" : "text-base text-muted"}`}
               >
                 {paragraph}
               </p>
@@ -35,7 +35,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative section-padding bg-section-warm">
+      <section className="section-padding bg-surface-warm">
         <div className="section-container">
           <SectionHeading
             title="Start Here"
@@ -43,14 +43,14 @@ export default function HomePage() {
             eyebrow="Pathways"
             centered
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {pathways.en.map((pathway) => (
               <PathwayCard key={pathway.title} {...pathway} />
             ))}
           </div>
-          <div className="mt-12 text-center">
+          <div className="mt-10 text-center">
             <Button href="/start-here" variant="primary">
-              View All Pathways
+              View all pathways
             </Button>
           </div>
         </div>
@@ -64,13 +64,13 @@ export default function HomePage() {
 
       <section className="section-padding">
         <div className="section-container">
-          <div className="mx-auto max-w-2xl rounded-3xl border border-tech-gold/20 bg-gradient-to-br from-white via-cream to-blush/30 p-10 text-center shadow-soft sm:p-14">
-            <p className="font-display text-xl leading-relaxed text-gt-navy sm:text-2xl">
+          <div className="mx-auto max-w-xl rounded-2xl border border-border bg-surface-warm p-10 text-center sm:p-12">
+            <p className="text-base leading-relaxed text-ink sm:text-lg">
               {content.welcomeClosing}
             </p>
             <div className="mt-8">
               <Button href="/contact" variant="secondary">
-                Get in Touch
+                Get in touch
               </Button>
             </div>
           </div>

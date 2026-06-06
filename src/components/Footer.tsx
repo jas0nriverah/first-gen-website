@@ -13,35 +13,28 @@ export function Footer({ locale = "en" }: FooterProps) {
   const altLabel = locale === "es" ? "English" : "Español";
 
   return (
-    <footer className="relative overflow-hidden bg-navy-gradient text-white">
-      <div className="pointer-events-none absolute inset-0 bg-gold-shimmer opacity-50" aria-hidden="true" />
-      <div className="gold-line opacity-30" />
-      <div className="section-container relative section-padding">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-border bg-ink text-white">
+      <div className="section-container py-16 sm:py-20">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-tech-gold/30 bg-white/5 text-sm font-bold text-tech-gold">
-                FG
-              </div>
-              <Link href={homeHref} className="font-display text-xl font-semibold text-white">
-                {siteConfig.name}
-              </Link>
-            </div>
-            <p className="max-w-xs text-sm leading-relaxed text-white/65">
+            <Link href={homeHref} className="text-base font-semibold text-white">
+              {siteConfig.name}
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
               {content.mission}
             </p>
           </div>
 
           <div>
-            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-tech-gold">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-neutral-500">
               {content.quickLinksTitle}
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 transition-colors hover:text-tech-gold-light"
+                    className="text-sm text-neutral-400 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -50,7 +43,7 @@ export function Footer({ locale = "en" }: FooterProps) {
               <li>
                 <Link
                   href="/links"
-                  className="text-sm text-white/60 transition-colors hover:text-tech-gold-light"
+                  className="text-sm text-neutral-400 transition-colors hover:text-white"
                 >
                   {locale === "es" ? "Enlaces" : "Link in Bio"}
                 </Link>
@@ -59,19 +52,19 @@ export function Footer({ locale = "en" }: FooterProps) {
           </div>
 
           <div>
-            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-tech-gold">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-neutral-500">
               {content.languageTitle}
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm text-white/60 transition-colors hover:text-tech-gold-light">
+                <Link href="/" className="text-sm text-neutral-400 transition-colors hover:text-white">
                   English
                 </Link>
               </li>
               <li>
                 <Link
                   href="/bienvenidos"
-                  className="text-sm text-white/60 transition-colors hover:text-tech-gold-light"
+                  className="text-sm text-neutral-400 transition-colors hover:text-white"
                 >
                   Español
                 </Link>
@@ -79,7 +72,7 @@ export function Footer({ locale = "en" }: FooterProps) {
               <li>
                 <Link
                   href={altHref}
-                  className="text-sm font-medium text-tech-gold transition-colors hover:text-tech-gold-light"
+                  className="text-sm text-accent transition-colors hover:text-accent-soft"
                 >
                   {altLabel} →
                 </Link>
@@ -88,20 +81,20 @@ export function Footer({ locale = "en" }: FooterProps) {
           </div>
 
           <div>
-            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-tech-gold">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-neutral-500">
               {content.contactTitle}
             </h3>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="text-sm text-white/60 transition-colors hover:text-white"
+              className="text-sm text-neutral-400 transition-colors hover:text-white"
             >
               {siteConfig.email}
             </a>
-            <p className="mt-6 text-xs text-white/40">{content.credit}</p>
+            <p className="mt-6 text-xs text-neutral-600">{content.credit}</p>
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/10 pt-8 text-center text-xs text-white/35">
+        <div className="mt-12 border-t border-neutral-800 pt-8 text-center text-xs text-neutral-600">
           © {new Date().getFullYear()} {siteConfig.name}. {content.credit}.
         </div>
       </div>

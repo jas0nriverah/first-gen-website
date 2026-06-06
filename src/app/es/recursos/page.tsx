@@ -14,19 +14,19 @@ export default function RecursosPage() {
     <>
       <PageHero
         title="Recursos"
-        subtitle="Guías organizadas y enlaces para ayudarte a navegar la escuela, la universidad y más allá. Se agregan más recursos regularmente."
+        subtitle="Guías organizadas y enlaces para ayudarte a navegar la escuela, la universidad y más allá."
       />
 
-      <div className="section-padding bg-section-sage">
+      <div className="section-padding bg-surface-warm">
         <div className="section-container">
-          <div className="mb-10 rounded-2xl border border-gt-navy/[0.06] bg-white/70 p-5 backdrop-blur-sm">
-            <p className="text-sm text-warm-gray">
+          <div className="mb-8 rounded-xl border border-border bg-white p-4">
+            <p className="text-sm text-muted">
               <span className="badge-soon mr-2">Próximamente</span>
-              Los elementos marcados como &quot;Próximamente&quot; son marcadores de posición. Stacy agregará enlaces reales cuando los recursos estén listos.
+              Los marcadores de posición serán reemplazados con enlaces reales cuando los recursos estén listos.
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             {resourceCategories.es.map((category) => (
               <ResourceCategoryCard
                 key={category.id}

@@ -9,54 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "gt-navy": "#003057",
-        "gt-navy-light": "#1a4d73",
-        "gt-navy-deep": "#001f3d",
-        "tech-gold": "#B3A369",
-        "tech-gold-light": "#d4c896",
-        "tech-gold-muted": "#e8e0c8",
-        cream: "#FBF9F5",
-        "cream-dark": "#F3EFE8",
-        blush: "#F7EDE4",
-        sage: "#E8EDE6",
-        "warm-gray": "#5C5C5C",
-        "warm-gray-light": "#8A8580",
-        "card-bg": "#F7F4EF",
+        ink: "#0A0A0A",
+        "ink-soft": "#262626",
+        muted: "#737373",
+        "muted-light": "#A3A3A3",
+        surface: "#F5F5F5",
+        "surface-warm": "#FAFAFA",
+        border: "#E5E5E5",
+        "border-dark": "#D4D4D4",
+        accent: "#FF5C35",
+        "accent-soft": "#FF7A5C",
+        "accent-muted": "#FFF0EB",
       },
       fontFamily: {
-        sans: ["var(--font-body)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 8px 32px -8px rgba(0, 48, 87, 0.12)",
-        card: "0 2px 16px -4px rgba(0, 48, 87, 0.08)",
-        glow: "0 0 40px -10px rgba(179, 163, 105, 0.35)",
-        lift: "0 12px 40px -12px rgba(0, 48, 87, 0.18)",
-      },
-      backgroundImage: {
-        "hero-glow":
-          "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(179,163,105,0.18), transparent), radial-gradient(ellipse 50% 40% at 90% 20%, rgba(0,48,87,0.06), transparent)",
-        "section-warm":
-          "linear-gradient(180deg, rgba(247,237,228,0.5) 0%, rgba(251,249,245,0) 100%)",
-        "section-sage":
-          "linear-gradient(180deg, rgba(232,237,230,0.4) 0%, rgba(251,249,245,0) 100%)",
-        "gold-shimmer":
-          "linear-gradient(135deg, rgba(179,163,105,0.15) 0%, transparent 50%, rgba(179,163,105,0.08) 100%)",
-        "navy-gradient": "linear-gradient(135deg, #003057 0%, #001f3d 100%)",
+        sm: "0 1px 2px 0 rgba(0, 0, 0, 0.04)",
+        card: "0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04)",
+        hover: "0 4px 12px -2px rgba(0, 0, 0, 0.08)",
       },
       animation: {
-        "fade-up": "fadeUp 0.7s ease-out forwards",
-        float: "float 6s ease-in-out infinite",
-        "float-delayed": "float 6s ease-in-out 2s infinite",
+        "fade-up": "fadeUp 0.5s ease-out forwards",
       },
       keyframes: {
         fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
         },
       },
     },

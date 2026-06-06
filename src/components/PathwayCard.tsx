@@ -38,39 +38,34 @@ export function PathwayCard({
   exploreLabel = "Explore",
 }: PathwayCardProps) {
   return (
-    <Link href={href} className="card group relative block h-full overflow-hidden">
-      <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 -translate-y-8 rounded-full bg-tech-gold/8 transition-transform duration-500 group-hover:scale-150" />
-      <div className="relative">
-        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-gt-navy/8 to-tech-gold/15 text-gt-navy transition-all duration-300 group-hover:from-tech-gold/20 group-hover:to-tech-gold/30 group-hover:shadow-glow">
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.5}
-            aria-hidden="true"
-          >
-            {icons[icon]}
-          </svg>
-        </div>
-        <h3 className="mb-2 font-display text-xl font-semibold text-gt-navy transition-colors group-hover:text-gt-navy-light">
-          {title}
-        </h3>
-        <p className="text-sm leading-relaxed text-warm-gray">{description}</p>
-        <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-tech-gold">
-          {exploreLabel}
-          <svg
-            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-            aria-hidden="true"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-          </svg>
-        </span>
+    <Link href={href} className="card group block h-full">
+      <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-surface text-ink transition-colors group-hover:bg-accent-muted group-hover:text-accent">
+        <svg
+          className="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          aria-hidden="true"
+        >
+          {icons[icon]}
+        </svg>
       </div>
+      <h3 className="mb-2 text-base font-semibold text-ink">{title}</h3>
+      <p className="text-sm leading-relaxed text-muted">{description}</p>
+      <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-ink">
+        {exploreLabel}
+        <svg
+          className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </span>
     </Link>
   );
 }

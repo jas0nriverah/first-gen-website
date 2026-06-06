@@ -17,16 +17,14 @@ export function PlaceholderImage({
 }: PlaceholderImageProps) {
   return (
     <div
-      className={`relative flex ${aspectClasses[aspectRatio]} items-center justify-center overflow-hidden rounded-2xl border border-gt-navy/[0.08] bg-gradient-to-br from-blush via-cream to-sage/30 ${className}`}
+      className={`flex ${aspectClasses[aspectRatio]} items-center justify-center rounded-2xl border border-dashed border-border bg-surface ${className}`}
       role="img"
       aria-label={label}
     >
-      <div className="absolute inset-0 bg-gold-shimmer opacity-40" />
-      <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-tech-gold/10 blur-2xl" />
-      <div className="relative px-6 text-center">
-        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-tech-gold/25 bg-white/60 shadow-card backdrop-blur-sm">
+      <div className="px-6 text-center">
+        <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white">
           <svg
-            className="h-7 w-7 text-tech-gold"
+            className="h-5 w-5 text-muted-light"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -40,7 +38,7 @@ export function PlaceholderImage({
             />
           </svg>
         </div>
-        <p className="text-sm font-medium text-warm-gray">{label}</p>
+        <p className="text-xs text-muted">{label}</p>
       </div>
     </div>
   );

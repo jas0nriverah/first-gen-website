@@ -25,39 +25,37 @@ export function Hero({
   const contactHref = locale === "es" ? "/es/contacto" : "/contact";
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden border-b border-border">
       <DecorativeBackground />
-      <div className="section-container relative section-padding pb-14 sm:pb-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="animate-fade-up">
-            <span className="badge mb-8">
-              <span className="h-1.5 w-1.5 rounded-full bg-tech-gold" />
-              {locale === "es"
-                ? "Estudiante de Primera Generación · Georgia Tech"
-                : "First-Generation Student · Georgia Tech"}
-            </span>
-          </div>
+      <div className="section-container relative py-24 sm:py-32 lg:py-40">
+        <div className="mx-auto max-w-3xl">
+          <span className="badge mb-8 animate-fade-up">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            {locale === "es"
+              ? "Estudiante de primera generación"
+              : "First-generation student"}
+          </span>
 
-          <h1 className="animate-fade-up font-display text-5xl font-semibold leading-[1.1] tracking-tight text-gt-navy sm:text-6xl lg:text-7xl">
+          <h1 className="animate-fade-up text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl [animation-delay:50ms]">
             {siteConfig.name}
           </h1>
 
-          <p className="animate-fade-up mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-warm-gray sm:text-xl [animation-delay:100ms]">
+          <p className="animate-fade-up mt-6 text-lg leading-relaxed text-muted sm:text-xl [animation-delay:100ms]">
             {locale === "es" ? siteConfig.taglineEs : siteConfig.tagline}
           </p>
 
-          <p className="animate-fade-up mx-auto mt-4 max-w-xl text-base italic text-warm-gray-light [animation-delay:150ms]">
+          <p className="animate-fade-up mt-4 max-w-xl text-base text-muted-light [animation-delay:150ms]">
             {subtitle}
           </p>
 
-          <div className="animate-fade-up mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap [animation-delay:200ms]">
+          <div className="animate-fade-up mt-10 flex flex-wrap gap-3 [animation-delay:200ms]">
             <Button href={startHref} variant="primary">
               {ctaStart}
             </Button>
-            <Button href={resourcesHref} variant="secondary">
+            <Button href={resourcesHref} variant="outline">
               {ctaResources}
             </Button>
-            <Button href={aboutHref} variant="outline">
+            <Button href={aboutHref} variant="ghost">
               {ctaAbout}
             </Button>
             <Button href={contactHref} variant="ghost">
@@ -66,7 +64,6 @@ export function Hero({
           </div>
         </div>
       </div>
-      <div className="gold-line" />
     </section>
   );
 }

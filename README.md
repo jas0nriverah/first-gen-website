@@ -242,9 +242,12 @@ These items are placeholders until Stacy provides the real versions:
 
 ## Design colors (for reference)
 
-- GT Navy: `#003057`
-- Tech Gold: `#B3A369`
-- Background: warm cream/off-white
+- Ink (text): `#0A0A0A`
+- Muted text: `#737373`
+- Background: white `#FFFFFF`
+- Surface sections: `#FAFAFA`
+- Accent (coral): `#FF5C35`
+- Footer: black `#0A0A0A`
 
 These are set in `tailwind.config.ts` if you ever need to adjust them.
 

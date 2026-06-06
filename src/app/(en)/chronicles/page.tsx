@@ -13,22 +13,22 @@ export default function ChroniclesPage() {
     <>
       <PageHero
         title="Chronicles"
-        subtitle="Personal stories, lessons learned, and advice from my first-gen journey. New posts coming soon."
+        subtitle="Personal stories, lessons learned, and advice from my first-gen journey."
       />
 
       <div className="section-padding">
         <div className="section-container">
-          <div className="mb-12 rounded-2xl border border-tech-gold/20 bg-blush/40 p-8 text-center">
-            <p className="text-gt-navy">
-              This blog section is being built out. Check back for new posts, or{" "}
-              <a href="/contact" className="font-semibold text-gt-navy-light underline decoration-tech-gold/50">
-                reach out
+          <div className="mb-10 rounded-xl border border-border bg-surface-warm p-6 text-center">
+            <p className="text-sm text-muted">
+              New posts coming soon.{" "}
+              <a href="/contact" className="font-medium text-ink underline underline-offset-2">
+                Reach out
               </a>{" "}
-              if there&apos;s a topic you&apos;d like to see covered.
+              if there&apos;s a topic you&apos;d like covered.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {blogPosts.en.map((post) => (
               <BlogPostCard
                 key={post.slug}

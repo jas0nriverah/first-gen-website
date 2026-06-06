@@ -6,30 +6,21 @@ type BilingualBannerProps = {
 
 export function BilingualBanner({ title, text, detail }: BilingualBannerProps) {
   return (
-    <section className="relative overflow-hidden bg-navy-gradient text-white">
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-tech-gold/10 blur-3xl" />
-        <div className="absolute -right-10 bottom-0 h-48 w-48 rounded-full bg-white/5 blur-3xl" />
-      </div>
-      <div className="section-container relative section-padding">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-8 inline-flex items-center gap-4 rounded-full border border-white/15 bg-white/5 px-6 py-2.5 backdrop-blur-sm">
-            <span className="text-sm font-semibold tracking-widest text-tech-gold-light">
-              EN
-            </span>
-            <span className="h-4 w-px bg-white/20" />
-            <span className="text-sm font-semibold tracking-widest text-tech-gold-light">
-              ES
-            </span>
+    <section className="border-y border-border bg-surface-warm">
+      <div className="section-container py-20 sm:py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-border bg-white px-4 py-2 text-xs font-medium text-muted">
+            <span>EN</span>
+            <span className="h-3 w-px bg-border" />
+            <span>ES</span>
           </div>
-          <h2 className="font-display text-3xl font-semibold sm:text-4xl">{title}</h2>
-          <p className="mt-6 text-lg leading-relaxed text-white/85">{text}</p>
+          <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">{title}</h2>
+          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">{text}</p>
           {detail && (
-            <p className="mt-5 text-base leading-relaxed text-white/55">{detail}</p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-light">{detail}</p>
           )}
         </div>
       </div>
-      <div className="gold-line opacity-40" />
     </section>
   );
 }

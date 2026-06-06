@@ -13,19 +13,19 @@ export default function ResourcesPage() {
     <>
       <PageHero
         title="Resources"
-        subtitle="Organized guides and links to help you navigate school, college, and beyond. More resources are being added regularly."
+        subtitle="Organized guides and links to help you navigate school, college, and beyond."
       />
 
-      <div className="section-padding bg-section-sage">
+      <div className="section-padding bg-surface-warm">
         <div className="section-container">
-          <div className="mb-10 rounded-2xl border border-gt-navy/[0.06] bg-white/70 p-5 backdrop-blur-sm">
-            <p className="text-sm text-warm-gray">
+          <div className="mb-8 rounded-xl border border-border bg-white p-4">
+            <p className="text-sm text-muted">
               <span className="badge-soon mr-2">Coming Soon</span>
-              Items marked &quot;Coming Soon&quot; are placeholders. Stacy will add real links as resources are finalized.
+              Placeholder items will be replaced with real links as resources are finalized.
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             {resourceCategories.en.map((category) => (
               <ResourceCategoryCard key={category.id} category={category} />
             ))}

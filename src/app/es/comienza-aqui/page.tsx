@@ -20,8 +20,8 @@ export default function ComienzaAquiPage() {
 
       <div className="section-padding">
         <div className="section-container">
-          <div className="mb-12 rounded-3xl border border-tech-gold/20 bg-gradient-to-r from-blush/50 via-white to-sage/30 p-8 sm:p-10">
-            <p className="font-display text-xl leading-relaxed text-gt-navy sm:text-2xl">
+          <div className="mb-12 max-w-2xl rounded-2xl border border-border bg-surface-warm p-8">
+            <p className="text-base leading-relaxed text-ink sm:text-lg">
               Cada camino de primera generación es diferente. Ya seas un estudiante de secundaria
               preparándote para la universidad, un estudiante actual descubriendo la vida universitaria,
               un padre/madre apoyando a su hijo/a, o alguien en la ruta pre-medicina — hay un punto
@@ -29,17 +29,15 @@ export default function ComienzaAquiPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {pathways.es.map((pathway) => (
               <PathwayCard key={pathway.title} {...pathway} exploreLabel="Explorar" />
             ))}
           </div>
 
-          <div className="mt-14 overflow-hidden rounded-3xl bg-navy-gradient p-10 text-center text-white shadow-lift sm:p-12">
-            <h3 className="font-display text-2xl font-semibold sm:text-3xl">
-              ¿Aún tienes preguntas?
-            </h3>
-            <p className="mx-auto mt-4 max-w-lg text-white/70">
+          <div className="mt-14 rounded-2xl bg-ink p-10 text-center text-white sm:p-12">
+            <h3 className="text-xl font-bold sm:text-2xl">¿Aún tienes preguntas?</h3>
+            <p className="mx-auto mt-3 max-w-md text-sm text-neutral-400">
               Con gusto te ayudo a orientarte. Escríbeme cuando quieras.
             </p>
             <div className="mt-8">

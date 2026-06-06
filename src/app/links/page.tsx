@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DecorativeBackground } from "@/components/DecorativeBackground";
 import { linkInBioButtons, siteConfig } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -10,36 +9,28 @@ export const metadata: Metadata = {
 
 export default function LinksPage() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-cream via-blush/30 to-cream-dark">
-      <DecorativeBackground variant="subtle" />
-      <div className="section-container relative px-4 py-14 sm:py-20">
-        <div className="mx-auto max-w-md text-center">
-          <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full bg-navy-gradient text-2xl font-bold text-tech-gold shadow-lift ring-4 ring-tech-gold/20">
+    <div className="min-h-screen bg-white">
+      <div className="section-container px-5 py-16 sm:py-24">
+        <div className="mx-auto max-w-sm text-center">
+          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-ink text-sm font-semibold text-white">
             SL
           </div>
-          <h1 className="font-display text-3xl font-semibold text-gt-navy">
-            {siteConfig.name}
-          </h1>
-          <p className="mt-2 text-sm font-medium text-tech-gold">
-            {siteConfig.creator}
-          </p>
-          <p className="mt-1 text-sm text-warm-gray-light">
-            First-Gen Student · Georgia Tech
-          </p>
-          <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-warm-gray">
+          <h1 className="text-lg font-bold text-ink">{siteConfig.name}</h1>
+          <p className="mt-1 text-xs text-muted">{siteConfig.creator}</p>
+          <p className="mt-4 text-xs leading-relaxed text-muted-light">
             {siteConfig.tagline}
           </p>
         </div>
 
-        <div className="mx-auto mt-12 flex max-w-md flex-col gap-3">
+        <div className="mx-auto mt-10 flex max-w-sm flex-col gap-2.5">
           {linkInBioButtons.map((button) => {
             if (button.comingSoon) {
               return (
                 <div
                   key={button.label}
-                  className="flex items-center justify-between rounded-2xl border border-gt-navy/8 bg-white/50 px-5 py-4 text-gt-navy/45 backdrop-blur-sm"
+                  className="flex items-center justify-between rounded-xl border border-border px-5 py-3.5 text-sm text-muted-light"
                 >
-                  <span className="font-medium">{button.label}</span>
+                  <span>{button.label}</span>
                   <span className="badge-soon">
                     {button.comingSoonLabel ?? "Coming Soon"}
                   </span>
@@ -52,11 +43,7 @@ export default function LinksPage() {
 
             if (isExternal) {
               return (
-                <a
-                  key={button.label}
-                  href={button.href}
-                  className="link-bio-btn-primary"
-                >
+                <a key={button.label} href={button.href} className="link-bio-btn-primary">
                   {button.label}
                 </a>
               );
@@ -69,10 +56,6 @@ export default function LinksPage() {
             );
           })}
         </div>
-
-        <p className="mx-auto mt-12 max-w-md text-center text-xs tracking-wide text-warm-gray-light">
-          Bilingual resources for first-generation students & Hispanic families
-        </p>
       </div>
     </div>
   );

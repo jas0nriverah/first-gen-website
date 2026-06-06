@@ -11,12 +11,9 @@ export function ResourceCategoryCard({
 }: ResourceCategoryCardProps) {
   return (
     <article id={category.id} className="card-static scroll-mt-24">
-      <div className="mb-1 flex items-center gap-3">
-        <span className="h-8 w-1 rounded-full bg-tech-gold" />
-        <h3 className="font-display text-xl font-semibold text-gt-navy">{category.title}</h3>
-      </div>
-      <p className="mb-6 ml-4 text-sm text-warm-gray">{category.description}</p>
-      <ul className="space-y-3">
+      <h3 className="mb-1 text-base font-semibold text-ink">{category.title}</h3>
+      <p className="mb-5 text-sm text-muted">{category.description}</p>
+      <ul className="space-y-2">
         {category.links.map((link) => (
           <li key={link.title}>
             {link.href && !link.comingSoon ? (
@@ -24,20 +21,18 @@ export function ResourceCategoryCard({
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block rounded-xl border border-gt-navy/[0.06] bg-cream/60 p-4 transition-all hover:border-tech-gold/30 hover:bg-white hover:shadow-card"
+                className="group block rounded-lg border border-border bg-surface-warm p-4 transition-colors hover:border-border-dark"
               >
-                <span className="font-medium text-gt-navy group-hover:text-gt-navy-light">
-                  {link.title}
-                </span>
-                <p className="mt-1 text-sm text-warm-gray">{link.description}</p>
+                <span className="text-sm font-medium text-ink">{link.title}</span>
+                <p className="mt-1 text-xs text-muted">{link.description}</p>
               </a>
             ) : (
-              <div className="rounded-xl border border-gt-navy/[0.06] bg-cream/40 p-4">
+              <div className="rounded-lg border border-border bg-surface-warm p-4">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="font-medium text-gt-navy">{link.title}</span>
+                  <span className="text-sm font-medium text-ink">{link.title}</span>
                   <span className="badge-soon">{comingSoonLabel}</span>
                 </div>
-                <p className="mt-1 text-sm text-warm-gray">{link.description}</p>
+                <p className="mt-1 text-xs text-muted">{link.description}</p>
               </div>
             )}
           </li>

@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { siteConfig } from "@/lib/site-data";
 import "./globals.css";
 
-const outfit = Outfit({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -31,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${cormorant.variable}`}>
+    <html lang="en" className={plusJakarta.variable}>
       <body className="min-h-screen font-sans">{children}</body>
     </html>
   );
