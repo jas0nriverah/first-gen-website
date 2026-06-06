@@ -2,31 +2,33 @@ import type { Metadata } from "next";
 import { BlogPostCard } from "@/components/BlogPostCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
-import { blogPosts } from "@/lib/site-data";
+import { blogPosts, chroniclesContent } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Chronicles",
-  description: "Stories, advice, and reflections from a first-generation student's journey.",
+  title: chroniclesContent.en.pageTitle,
+  description: chroniclesContent.en.metaDescription,
 };
 
 export default function ChroniclesPage() {
+  const content = chroniclesContent.en;
+
   return (
     <>
-      <PageHero
-        title="Chronicles"
-        subtitle="Personal stories, lessons learned, and advice from my first-gen journey."
-      />
-      <Breadcrumbs items={[{ label: "Chronicles" }]} locale="en" />
+      <PageHero title={content.pageTitle} subtitle={content.subtitle} />
+      <Breadcrumbs items={[{ label: content.breadcrumb }]} locale="en" />
 
       <div className="section-padding">
         <div className="section-container">
           <div className="mb-10 rounded-xl border border-border bg-surface-warm p-6 text-center">
             <p className="text-sm text-muted">
-              New posts coming soon.{" "}
-              <a href="/contact" className="font-medium text-ink underline underline-offset-2">
-                Reach out
+              {content.bannerText}{" "}
+              <a
+                href={content.bannerLinkHref}
+                className="font-medium text-ink underline underline-offset-2"
+              >
+                {content.bannerLinkText}
               </a>{" "}
-              if there&apos;s a topic you&apos;d like covered.
+              {content.bannerSuffix}
             </p>
           </div>
 
@@ -37,6 +39,7 @@ export default function ChroniclesPage() {
                 title={post.title}
                 excerpt={post.excerpt}
                 comingSoon={post.comingSoon}
+                comingSoonLabel={content.comingSoonLabel}
               />
             ))}
           </div>

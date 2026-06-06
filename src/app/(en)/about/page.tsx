@@ -56,11 +56,11 @@ export default function AboutPage() {
               <AboutSections sections={content.sections} />
 
               <div className="mt-12 flex flex-wrap gap-3">
-                <Button href="/resources" variant="primary">
-                  Browse resources
+                <Button href={content.ctas.primaryHref} variant="primary">
+                  {content.ctas.primary}
                 </Button>
-                <Button href="/contact" variant="outline">
-                  Contact me
+                <Button href={content.ctas.secondaryHref} variant="outline">
+                  {content.ctas.secondary}
                 </Button>
               </div>
             </div>

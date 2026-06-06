@@ -2,32 +2,33 @@ import type { Metadata } from "next";
 import { BlogPostCard } from "@/components/BlogPostCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
-import { blogPosts } from "@/lib/site-data";
+import { blogPosts, chroniclesContent } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Crónicas",
-  description:
-    "Historias, consejos y reflexiones del camino de una estudiante de primera generación.",
+  title: chroniclesContent.es.pageTitle,
+  description: chroniclesContent.es.metaDescription,
 };
 
 export default function CronicasPage() {
+  const content = chroniclesContent.es;
+
   return (
     <>
-      <PageHero
-        title="Crónicas"
-        subtitle="Historias personales, lecciones aprendidas y consejos de mi camino como estudiante de primera generación."
-      />
-      <Breadcrumbs items={[{ label: "Crónicas" }]} locale="es" />
+      <PageHero title={content.pageTitle} subtitle={content.subtitle} />
+      <Breadcrumbs items={[{ label: content.breadcrumb }]} locale="es" />
 
       <div className="section-padding">
         <div className="section-container">
           <div className="mb-10 rounded-xl border border-border bg-surface-warm p-6 text-center">
             <p className="text-sm text-muted">
-              Nuevas publicaciones próximamente.{" "}
-              <a href="/es/contacto" className="font-medium text-ink underline underline-offset-2">
-                Escríbeme
+              {content.bannerText}{" "}
+              <a
+                href={content.bannerLinkHref}
+                className="font-medium text-ink underline underline-offset-2"
+              >
+                {content.bannerLinkText}
               </a>{" "}
-              si hay un tema que te gustaría ver cubierto.
+              {content.bannerSuffix}
             </p>
           </div>
 
@@ -38,7 +39,7 @@ export default function CronicasPage() {
                 title={post.title}
                 excerpt={post.excerpt}
                 comingSoon={post.comingSoon}
-                comingSoonLabel="Próximamente"
+                comingSoonLabel={content.comingSoonLabel}
               />
             ))}
           </div>

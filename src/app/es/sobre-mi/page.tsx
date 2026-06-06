@@ -57,11 +57,11 @@ export default function SobreMiPage() {
               <AboutSections sections={content.sections} />
 
               <div className="mt-12 flex flex-wrap gap-3">
-                <Button href="/es/recursos" variant="primary">
-                  Ver recursos
+                <Button href={content.ctas.primaryHref} variant="primary">
+                  {content.ctas.primary}
                 </Button>
-                <Button href="/es/contacto" variant="outline">
-                  Contáctame
+                <Button href={content.ctas.secondaryHref} variant="outline">
+                  {content.ctas.secondary}
                 </Button>
               </div>
             </div>

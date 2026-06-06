@@ -1,30 +1,40 @@
-import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { linkInBioButtons, siteConfig } from "@/lib/site-data";
+import type { LinkInBioButton } from "@/lib/site-data";
+import { linkInBioContent, siteConfig, uxLabels } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Links",
-  description: "Quick links to First Gen Chronicles — perfect for Instagram bio or social media.",
+type LinksPageContentProps = {
+  locale: "en" | "es";
 };
 
-export default function LinksPage() {
+export function LinksPageContent({ locale }: LinksPageContentProps) {
+  const content = linkInBioContent[locale];
+  const labels = uxLabels[locale];
+
   return (
     <div className="relative min-h-screen bg-page">
       <div className="absolute right-5 top-5">
-        <ThemeToggle />
+        <ThemeToggle locale={locale} />
       </div>
 
       <div className="section-container px-5 py-16 sm:py-24">
         <div className="mx-auto max-w-sm text-center">
-          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-btn-primary text-sm font-semibold text-btn-primary-text">
-            SL
+          <div className="relative mx-auto mb-5 h-16 w-16 overflow-hidden rounded-full border border-border">
+            <Image
+              src={content.avatarSrc}
+              alt={content.avatarAlt}
+              fill
+              className="object-cover object-top"
+              sizes="64px"
+              priority
+            />
           </div>
           <h1 className="text-lg font-bold text-ink">{siteConfig.name}</h1>
           <p className="mt-1 text-xs text-muted">{siteConfig.creator}</p>
           <p className="mt-4 text-xs leading-relaxed text-muted-light">
-            {siteConfig.tagline}
+            {locale === "es" ? siteConfig.taglineEs : siteConfig.tagline}
           </p>
         </div>
 
@@ -33,7 +43,7 @@ export default function LinksPage() {
         </div>
 
         <div className="mx-auto mt-8 flex max-w-sm flex-col gap-2.5">
-          {linkInBioButtons.map((button) => {
+          {content.buttons.map((button: LinkInBioButton) => {
             if (button.comingSoon) {
               return (
                 <div
@@ -42,7 +52,7 @@ export default function LinksPage() {
                 >
                   <span>{button.label}</span>
                   <span className="badge-soon">
-                    {button.comingSoonLabel ?? "Coming Soon"}
+                    {button.comingSoonLabel ?? content.comingSoonLabel}
                   </span>
                 </div>
               );
@@ -66,6 +76,10 @@ export default function LinksPage() {
             );
           })}
         </div>
+
+        <p className="mx-auto mt-10 max-w-sm text-center text-xs text-muted-light">
+          {labels.linkInBioTitle} · {siteConfig.name}
+        </p>
       </div>
     </div>
   );

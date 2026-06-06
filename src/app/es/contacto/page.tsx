@@ -32,12 +32,12 @@ export default function ContactoPage() {
               </ul>
               <div className="mt-8">
                 <Button href={`mailto:${siteConfig.email}`} variant="primary">
-                  Enviar correo
+                  {content.emailButton}
                 </Button>
               </div>
               <p className="mt-6 text-xs text-muted-light">{content.responseNote}</p>
               <div className="mt-6 border-t border-border pt-6">
-                <p className="mb-3 text-sm font-medium text-ink">Sígueme</p>
+                <p className="mb-3 text-sm font-medium text-ink">{content.followTitle}</p>
                 <SocialLinks />
               </div>
             </div>

@@ -11,12 +11,39 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.tagline,
   authors: [{ name: siteConfig.creator }],
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: "/images/about/stacy-lab-coat.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    alternateLocale: ["es_US"],
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.tagline,
+    images: [
+      {
+        url: "/images/about/stacy-lab-coat.png",
+        width: 768,
+        height: 1024,
+        alt: `${siteConfig.creator} — ${siteConfig.name}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.tagline,
+    images: ["/images/about/stacy-lab-coat.png"],
+  },
 };
 
 const themeScript = `

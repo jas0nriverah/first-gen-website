@@ -1,20 +1,23 @@
 "use client";
 
+import { uxLabels } from "@/lib/site-data";
 import { useTheme } from "./ThemeProvider";
 
 type ThemeToggleProps = {
   className?: string;
+  locale?: "en" | "es";
 };
 
-export function ThemeToggle({ className = "" }: ThemeToggleProps) {
+export function ThemeToggle({ className = "", locale = "en" }: ThemeToggleProps) {
   const { theme, toggleTheme } = useTheme();
+  const labels = uxLabels[locale];
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
       className={`rounded-md border border-border p-2 text-muted transition-colors hover:border-border-dark hover:text-ink ${className}`}
-      aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+      aria-label={theme === "light" ? labels.themeLight : labels.themeDark}
     >
       {theme === "light" ? (
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

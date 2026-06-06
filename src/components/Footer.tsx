@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SocialLinks } from "./SocialLinks";
+import { getAlternateLocaleHref } from "@/lib/locale-routes";
 import { footerContent, navLinksEn, navLinksEs, siteConfig } from "@/lib/site-data";
 
 type FooterProps = {
@@ -7,11 +11,14 @@ type FooterProps = {
 };
 
 export function Footer({ locale = "en" }: FooterProps) {
+  const pathname = usePathname();
   const content = footerContent[locale];
   const navLinks = locale === "es" ? navLinksEs : navLinksEn;
   const homeHref = locale === "es" ? "/bienvenidos" : "/";
-  const altHref = locale === "es" ? "/" : "/bienvenidos";
+  const altHref = getAlternateLocaleHref(pathname);
   const altLabel = locale === "es" ? "English" : "Español";
+  const linksHref = locale === "es" ? "/es/enlaces" : "/links";
+  const linksLabel = locale === "es" ? "Enlaces" : "Link in Bio";
 
   return (
     <footer className="border-t border-border bg-inverse text-inverse-foreground">
@@ -43,10 +50,10 @@ export function Footer({ locale = "en" }: FooterProps) {
               ))}
               <li>
                 <Link
-                  href="/links"
+                  href={linksHref}
                   className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
                 >
-                  {locale === "es" ? "Enlaces" : "Link in Bio"}
+                  {linksLabel}
                 </Link>
               </li>
             </ul>

@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { navLinksEn, navLinksEs, siteConfig } from "@/lib/site-data";
+import { getAlternateLocaleHref } from "@/lib/locale-routes";
+import { navLinksEn, navLinksEs, siteConfig, uxLabels } from "@/lib/site-data";
 import { ThemeToggle } from "./ThemeToggle";
 
 type HeaderProps = {
@@ -20,8 +21,9 @@ export function Header({ locale = "en" }: HeaderProps) {
   const pathname = usePathname();
   const navLinks = locale === "es" ? navLinksEs : navLinksEn;
   const homeHref = locale === "es" ? "/bienvenidos" : "/";
-  const altLocaleHref = locale === "es" ? "/" : "/bienvenidos";
+  const altLocaleHref = getAlternateLocaleHref(pathname);
   const altLocaleLabel = locale === "es" ? "English" : "Español";
+  const labels = uxLabels[locale];
 
   const linkClass = (href: string) => {
     const active = isActive(pathname, href, homeHref);
@@ -67,14 +69,14 @@ export function Header({ locale = "en" }: HeaderProps) {
               </Link>
             </nav>
 
-            <ThemeToggle />
+            <ThemeToggle locale={locale} />
 
             <button
               type="button"
               className="rounded-md p-2 text-ink lg:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-expanded={menuOpen}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-label={menuOpen ? labels.closeMenu : labels.openMenu}
             >
               {menuOpen ? (
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

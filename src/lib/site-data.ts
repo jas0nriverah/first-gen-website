@@ -13,6 +13,9 @@ export const siteConfig = {
   nameEs: "First Gen Chronicles",
   creator: "Stacy Lomeli",
   email: "stacylomeli.biz@gmail.com",
+  // Live site URL — used for social previews. Override in Vercel with NEXT_PUBLIC_SITE_URL.
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://first-gen-website.vercel.app",
   // Social profiles — edit URLs here
   social: {
     linkedin: "https://www.linkedin.com/in/stacylomeli/",
@@ -71,6 +74,14 @@ export const homeContent = {
       "This space isn't only for English-speaking students. It's also for Hispanic families, Spanish-dominant students, and anyone who grew up translating FAFSA forms, emails, applications, and deadlines for their parents.",
     welcomeClosing:
       "Whether you're preparing for college, navigating your first semester, or balancing school, work, and life — you're not alone. Welcome — I'm truly glad you're here.",
+    missionEyebrow: "Our mission",
+    pathwaysEyebrow: "Pathways",
+    pathwaysTitle: "Start Here",
+    pathwaysSubtitle: "Find the guidance that fits where you are right now.",
+    pathwaysCta: "View all pathways",
+    pathwaysCtaHref: "/start-here",
+    closingCta: "Get in touch",
+    closingCtaHref: "/contact",
   },
   es: {
     heroSubtitle:
@@ -92,6 +103,77 @@ export const homeContent = {
       "Este espacio no es solo para estudiantes que hablan inglés. También es para familias hispanas, estudiantes que dominan más el español, y quienes crecieron traduciendo formularios de FAFSA, correos, aplicaciones y fechas límite para sus padres.",
     welcomeClosing:
       "Ya sea que estés preparándote para la universidad, navegando tu primer semestre o equilibrando la escuela, el trabajo y la vida — no estás solo/a. Bienvenido/a — me alegra muchísimo que estés aquí.",
+    missionEyebrow: "Nuestra misión",
+    pathwaysEyebrow: "Caminos",
+    pathwaysTitle: "Comienza Aquí",
+    pathwaysSubtitle: "Encuentra la orientación que se ajusta a donde estás ahora mismo.",
+    pathwaysCta: "Ver todos los caminos",
+    pathwaysCtaHref: "/es/comienza-aqui",
+    closingCta: "Contáctame",
+    closingCtaHref: "/es/contacto",
+  },
+};
+
+// ─── START HERE PAGE ─────────────────────────────────────────────────────────────
+
+export const startHereContent = {
+  en: {
+    pageTitle: "Start Here",
+    subtitle:
+      "Not sure where to begin? Choose the pathway that matches where you are — or where you want to go.",
+    metaDescription:
+      "Resource pathways for high school students, college students, families, and pre-med students.",
+    breadcrumb: "Start Here",
+    intro:
+      "Every first-gen journey looks different. Whether you're a high school student preparing for college, a current student figuring out campus life, a parent supporting your child, or someone on the pre-med track — there's a starting point here for you.",
+    ctaTitle: "Still have questions?",
+    ctaText: "I'm happy to help point you in the right direction. Reach out anytime.",
+    ctaButton: "Contact Stacy",
+    ctaHref: "/contact",
+  },
+  es: {
+    pageTitle: "Comienza Aquí",
+    subtitle:
+      "¿No sabes por dónde empezar? Elige el camino que coincida con donde estás — o hacia dónde quieres ir.",
+    metaDescription:
+      "Caminos de recursos para estudiantes de secundaria, universitarios, familias y estudiantes pre-medicina.",
+    breadcrumb: "Comienza Aquí",
+    intro:
+      "Cada camino de primera generación es diferente. Ya seas un estudiante de secundaria preparándote para la universidad, un estudiante actual descubriendo la vida universitaria, un padre/madre apoyando a su hijo/a, o alguien en la ruta pre-medicina — hay un punto de partida aquí para ti.",
+    ctaTitle: "¿Aún tienes preguntas?",
+    ctaText: "Con gusto te ayudo a orientarte. Escríbeme cuando quieras.",
+    ctaButton: "Contactar a Stacy",
+    ctaHref: "/es/contacto",
+  },
+};
+
+// ─── CHRONICLES PAGE ─────────────────────────────────────────────────────────────
+
+export const chroniclesContent = {
+  en: {
+    pageTitle: "Chronicles",
+    subtitle: "Personal stories, lessons learned, and advice from my first-gen journey.",
+    metaDescription:
+      "Stories, advice, and reflections from a first-generation student's journey.",
+    breadcrumb: "Chronicles",
+    bannerText: "New posts coming soon.",
+    bannerLinkText: "Reach out",
+    bannerLinkHref: "/contact",
+    bannerSuffix: "if there's a topic you'd like covered.",
+    comingSoonLabel: "Coming Soon",
+  },
+  es: {
+    pageTitle: "Crónicas",
+    subtitle:
+      "Historias personales, lecciones aprendidas y consejos de mi camino como estudiante de primera generación.",
+    metaDescription:
+      "Historias, consejos y reflexiones del camino de una estudiante de primera generación.",
+    breadcrumb: "Crónicas",
+    bannerText: "Nuevas publicaciones próximamente.",
+    bannerLinkText: "Escríbeme",
+    bannerLinkHref: "/es/contacto",
+    bannerSuffix: "si hay un tema que te gustaría ver cubierto.",
+    comingSoonLabel: "Próximamente",
   },
 };
 
@@ -328,6 +410,12 @@ export const aboutContent = {
       { label: "Track", value: "Pre-med" },
       { label: "School", value: "Georgia Institute of Technology" },
     ],
+    ctas: {
+      primary: "Browse resources",
+      primaryHref: "/resources",
+      secondary: "Contact me",
+      secondaryHref: "/contact",
+    },
   },
   es: {
     pageTitle: "Sobre Mí",
@@ -423,6 +511,12 @@ export const aboutContent = {
       { label: "Ruta", value: "Pre-medicina" },
       { label: "Universidad", value: "Georgia Institute of Technology" },
     ],
+    ctas: {
+      primary: "Ver recursos",
+      primaryHref: "/es/recursos",
+      secondary: "Contáctame",
+      secondaryHref: "/es/contacto",
+    },
   },
 };
 
@@ -700,7 +794,14 @@ export const uxLabels = {
     notFoundTitle: "Page not found",
     notFoundText: "This page doesn't exist — but you're not lost. Start here instead.",
     notFoundCta: "Go home",
+    notFoundStartCta: "Start here",
+    notFoundStartHref: "/start-here",
     breadcrumbHome: "Home",
+    themeLight: "Switch to dark mode",
+    themeDark: "Switch to light mode",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    linkInBioTitle: "Links",
   },
   es: {
     skipToContent: "Saltar al contenido",
@@ -712,7 +813,14 @@ export const uxLabels = {
     notFoundTitle: "Página no encontrada",
     notFoundText: "Esta página no existe — pero no estás perdido/a. Comienza aquí.",
     notFoundCta: "Ir al inicio",
+    notFoundStartCta: "Comienza aquí",
+    notFoundStartHref: "/es/comienza-aqui",
     breadcrumbHome: "Inicio",
+    themeLight: "Cambiar a modo oscuro",
+    themeDark: "Cambiar a modo claro",
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
+    linkInBioTitle: "Enlaces",
   },
 };
 
@@ -800,6 +908,8 @@ export const contactContent = {
       "Help for Spanish-speaking families",
     ],
     responseNote: "I'll respond as soon as I can. Thank you for reaching out!",
+    followTitle: "Follow along",
+    emailButton: "Email Stacy",
   },
   es: {
     pageTitle: "Contacto",
@@ -823,36 +933,83 @@ export const contactContent = {
       "Información sobre becas, FAFSA o ayuda financiera",
     ],
     responseNote: "Responderé lo antes posible. ¡Gracias por comunicarte conmigo!",
+    followTitle: "Sígueme",
+    emailButton: "Enviar correo",
   },
 };
 
-// ─── LINK-IN-BIO PAGE (/links) ───────────────────────────────────────────────────
+// ─── LINK-IN-BIO PAGE (/links and /es/enlaces) ───────────────────────────────────
 // Edit buttons for Instagram/bio link page. Set comingSoon: true until ready.
 // When newsletter or mentorship form is ready, add href and set comingSoon: false.
 
-export const linkInBioButtons = [
-  { label: "Home", href: "/", icon: "home" },
-  { label: "About Stacy", href: "/about", icon: "person" },
-  { label: "Resources", href: "/resources", icon: "resources" },
-  { label: "English Welcome", href: "/", icon: "en" },
-  { label: "Bienvenidos", href: "/bienvenidos", icon: "es" },
-  { label: "Contact", href: "/contact", icon: "contact" },
-  { label: "Email Stacy", href: `mailto:${siteConfig.email}`, icon: "email" },
-  {
-    label: "Newsletter Signup",
-    href: "",
-    icon: "newsletter",
-    comingSoon: true,
+export type LinkInBioButton = {
+  label: string;
+  href: string;
+  comingSoon?: boolean;
+  comingSoonLabel?: string;
+};
+
+export const linkInBioContent = {
+  en: {
+    metaDescription:
+      "Quick links to First Gen Chronicles — perfect for Instagram bio or social media.",
+    avatarSrc: "/images/about/stacy-lab-coat.png",
+    avatarAlt: "Stacy Lomeli",
     comingSoonLabel: "Coming Soon",
+    buttons: [
+      { label: "Home", href: "/" },
+      { label: "About Stacy", href: "/about" },
+      { label: "Resources", href: "/resources" },
+      { label: "English Welcome", href: "/" },
+      { label: "Bienvenidos", href: "/bienvenidos" },
+      { label: "Contact", href: "/contact" },
+      { label: "Email Stacy", href: `mailto:${siteConfig.email}` },
+      {
+        label: "Newsletter Signup",
+        href: "",
+        comingSoon: true,
+        comingSoonLabel: "Coming Soon",
+      },
+      {
+        label: "Mentorship Interest Form",
+        href: "",
+        comingSoon: true,
+        comingSoonLabel: "Coming Soon",
+      },
+    ] as LinkInBioButton[],
   },
-  {
-    label: "Mentorship Interest Form",
-    href: "",
-    icon: "mentorship",
-    comingSoon: true,
-    comingSoonLabel: "Coming Soon",
+  es: {
+    metaDescription:
+      "Enlaces rápidos a First Gen Chronicles — ideal para la biografía de Instagram o redes sociales.",
+    avatarSrc: "/images/about/stacy-lab-coat.png",
+    avatarAlt: "Stacy Lomeli",
+    comingSoonLabel: "Próximamente",
+    buttons: [
+      { label: "Inicio", href: "/bienvenidos" },
+      { label: "Sobre Mí", href: "/es/sobre-mi" },
+      { label: "Recursos", href: "/es/recursos" },
+      { label: "English", href: "/" },
+      { label: "Español", href: "/bienvenidos" },
+      { label: "Contacto", href: "/es/contacto" },
+      { label: "Enviar correo", href: `mailto:${siteConfig.email}` },
+      {
+        label: "Boletín informativo",
+        href: "",
+        comingSoon: true,
+        comingSoonLabel: "Próximamente",
+      },
+      {
+        label: "Formulario de mentoría",
+        href: "",
+        comingSoon: true,
+        comingSoonLabel: "Próximamente",
+      },
+    ] as LinkInBioButton[],
   },
-];
+};
+
+/** @deprecated Use linkInBioContent.en.buttons */
+export const linkInBioButtons = linkInBioContent.en.buttons;
 
 // ─── FOOTER ──────────────────────────────────────────────────────────────────────
 

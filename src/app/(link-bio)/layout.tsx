@@ -1,4 +1,4 @@
-export default function LinksLayout({
+export default function LinkBioLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

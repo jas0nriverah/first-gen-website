@@ -31,7 +31,7 @@ export default function BienvenidosPage() {
 
       <section className="section-padding">
         <div className="section-container">
-          <SectionHeading title={content.introTitle} eyebrow="Nuestra misión" />
+          <SectionHeading title={content.introTitle} eyebrow={content.missionEyebrow} />
           <div className="mx-auto max-w-2xl space-y-5">
             {content.introParagraphs.map((paragraph, i) => (
               <p
@@ -48,9 +48,9 @@ export default function BienvenidosPage() {
       <section className="section-padding bg-surface-warm">
         <div className="section-container">
           <SectionHeading
-            title="Comienza Aquí"
-            subtitle="Encuentra la orientación que se ajusta a donde estás ahora mismo."
-            eyebrow="Caminos"
+            title={content.pathwaysTitle}
+            subtitle={content.pathwaysSubtitle}
+            eyebrow={content.pathwaysEyebrow}
             centered
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,8 +59,8 @@ export default function BienvenidosPage() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Button href="/es/comienza-aqui" variant="primary">
-              Ver todos los caminos
+            <Button href={content.pathwaysCtaHref} variant="primary">
+              {content.pathwaysCta}
             </Button>
           </div>
         </div>
@@ -79,8 +79,8 @@ export default function BienvenidosPage() {
               {content.welcomeClosing}
             </p>
             <div className="mt-8">
-              <Button href="/es/contacto" variant="secondary">
-                Contáctame
+              <Button href={content.closingCtaHref} variant="secondary">
+                {content.closingCta}
               </Button>
             </div>
           </div>
