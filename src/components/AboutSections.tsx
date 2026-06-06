@@ -1,9 +1,37 @@
 import Image from "next/image";
-import type { AboutSection } from "@/lib/site-data";
+import type { AboutImage, AboutSection } from "@/lib/site-data";
 
 type AboutSectionsProps = {
   sections: AboutSection[];
 };
+
+const objectPositionClass = {
+  left: "object-left",
+  center: "object-center",
+  right: "object-right",
+} as const;
+
+function AboutImageCard({ image }: { image: AboutImage }) {
+  const isLandscape = image.orientation === "landscape";
+  const fit = image.fit ?? (isLandscape ? "contain" : "cover");
+  const position = image.objectPosition ?? "center";
+
+  return (
+    <div
+      className={`relative overflow-hidden rounded-2xl border border-border bg-surface ${
+        isLandscape ? "aspect-[4/3]" : "aspect-[3/4]"
+      }`}
+    >
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        className={`${fit === "contain" ? "object-contain" : "object-cover"} ${objectPositionClass[position]}`}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
+    </div>
+  );
+}
 
 export function AboutSections({ sections }: AboutSectionsProps) {
   return (
@@ -37,21 +65,19 @@ export function AboutSections({ sections }: AboutSectionsProps) {
                   ? "max-w-sm"
                   : section.images.length === 2
                     ? "sm:grid-cols-2"
-                    : "sm:grid-cols-2 lg:grid-cols-3"
+                    : "sm:grid-cols-2"
               }`}
             >
-              {section.images.map((image) => (
+              {section.images.map((image, index) => (
                 <div
                   key={image.src}
-                  className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-surface"
+                  className={
+                    section.images!.length === 3 && index === 2
+                      ? "sm:col-span-2 sm:mx-auto sm:max-w-sm"
+                      : undefined
+                  }
                 >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
+                  <AboutImageCard image={image} />
                 </div>
               ))}
             </div>

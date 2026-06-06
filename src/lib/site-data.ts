@@ -210,12 +210,23 @@ export const socialLinks = [
   },
 ];
 
+export type AboutImage = {
+  src: string;
+  alt: string;
+  /** Use landscape for wide photos so subjects on the edges aren't cropped. */
+  orientation?: "portrait" | "landscape";
+  /** Pin focal point when using cover — e.g. "left" keeps Stacy visible in group shots. */
+  objectPosition?: "left" | "center" | "right";
+  /** contain shows the full photo; cover fills the frame. */
+  fit?: "cover" | "contain";
+};
+
 export type AboutSection = {
   id: string;
   title: string;
   paragraphs: string[];
   bullets?: string[];
-  images?: { src: string; alt: string }[];
+  images?: AboutImage[];
 };
 
 // ─── ABOUT STACY ───────────────────────────────────────────────────────────────
@@ -255,7 +266,7 @@ export const aboutContent = {
         ],
         images: [
           { src: "/images/about/lab-coat-group.png", alt: "Stacy with peers in lab coats" },
-          { src: "/images/about/stacy-lab-coat.png", alt: "Stacy in a lab coat outdoors" },
+          { src: "/images/about/lab-coat-friends.png", alt: "Stacy with friends in lab coats on campus" },
         ],
       },
       {
@@ -277,8 +288,21 @@ export const aboutContent = {
           "I shared my story with Latino students — many of them first-generation or non-English speakers — and reminded them that they belong in every room they walk into. Our community deserves guidance, support, and access — in English and in Spanish.",
         ],
         images: [
-          { src: "/images/about/hhf-speaking.png", alt: "Stacy speaking at the Hispanic Heritage Foundation summit" },
-          { src: "/images/about/hhf-group.png", alt: "Stacy with fellow panelists at the Hispanic Heritage Foundation" },
+          {
+            src: "/images/about/hhf-panel.png",
+            alt: "Panel discussion at the Hispanic Heritage Foundation summit",
+            orientation: "landscape",
+          },
+          {
+            src: "/images/about/hhf-group.png",
+            alt: "Stacy with fellow panelists at the Hispanic Heritage Foundation",
+            orientation: "landscape",
+            objectPosition: "left",
+          },
+          {
+            src: "/images/about/hhf-speaking.png",
+            alt: "Stacy speaking at the Hispanic Heritage Foundation summit",
+          },
         ],
       },
       {
@@ -337,7 +361,7 @@ export const aboutContent = {
         ],
         images: [
           { src: "/images/about/lab-coat-group.png", alt: "Stacy con compañeros en batas de laboratorio" },
-          { src: "/images/about/stacy-lab-coat.png", alt: "Stacy con bata de laboratorio al aire libre" },
+          { src: "/images/about/lab-coat-friends.png", alt: "Stacy con amigas en batas de laboratorio en el campus" },
         ],
       },
       {
@@ -359,8 +383,21 @@ export const aboutContent = {
           "Compartí mi historia con estudiantes latinos — muchos de primera generación o que no hablan inglés — y les recordé que pertenecen en cada espacio al que entran. Nuestra comunidad merece orientación, apoyo y acceso — en inglés y en español.",
         ],
         images: [
-          { src: "/images/about/hhf-speaking.png", alt: "Stacy hablando en la cumbre de la Hispanic Heritage Foundation" },
-          { src: "/images/about/hhf-group.png", alt: "Stacy con otros panelistas de la Hispanic Heritage Foundation" },
+          {
+            src: "/images/about/hhf-panel.png",
+            alt: "Panel de discusión en la cumbre de la Hispanic Heritage Foundation",
+            orientation: "landscape",
+          },
+          {
+            src: "/images/about/hhf-group.png",
+            alt: "Stacy con otros panelistas de la Hispanic Heritage Foundation",
+            orientation: "landscape",
+            objectPosition: "left",
+          },
+          {
+            src: "/images/about/hhf-speaking.png",
+            alt: "Stacy hablando en la cumbre de la Hispanic Heritage Foundation",
+          },
         ],
       },
       {
