@@ -59,6 +59,64 @@
     --shadow-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
   }
 
+  /* High-contrast mode (light) — maximizes legibility for low-vision users */
+  .contrast-high {
+    --color-page: #ffffff;
+    --color-card: #ffffff;
+    --color-text: #000000;
+    --color-text-soft: #000000;
+    --color-muted: #1a1a1a;
+    --color-muted-light: #333333;
+    --color-surface: #ffffff;
+    --color-surface-warm: #ffffff;
+    --color-border: #000000;
+    --color-border-dark: #000000;
+    --color-accent: #b32400;
+    --color-accent-soft: #b32400;
+    --color-accent-muted: #ffe4dc;
+    --color-inverse: #000000;
+    --color-inverse-text: #ffffff;
+    --color-footer-muted: #ffffff;
+    --color-footer-subtle: #e5e5e5;
+    --color-btn-primary: #000000;
+    --color-btn-primary-hover: #000000;
+    --color-btn-primary-text: #ffffff;
+    --color-header-bg: #ffffff;
+    --color-dot-grid: #000000;
+  }
+
+  /* High-contrast mode (dark) */
+  .dark.contrast-high {
+    --color-page: #000000;
+    --color-card: #000000;
+    --color-text: #ffffff;
+    --color-text-soft: #ffffff;
+    --color-muted: #f0f0f0;
+    --color-muted-light: #d4d4d4;
+    --color-surface: #000000;
+    --color-surface-warm: #000000;
+    --color-border: #ffffff;
+    --color-border-dark: #ffffff;
+    --color-accent: #ff9a7a;
+    --color-accent-soft: #ff9a7a;
+    --color-accent-muted: #3a2018;
+    --color-inverse: #ffffff;
+    --color-inverse-text: #000000;
+    --color-footer-muted: #ffffff;
+    --color-footer-subtle: #d4d4d4;
+    --color-btn-primary: #ffffff;
+    --color-btn-primary-hover: #ffffff;
+    --color-btn-primary-text: #000000;
+    --color-header-bg: #000000;
+    --color-dot-grid: #ffffff;
+  }
+
+  /* Stronger focus outline when high contrast is on */
+  .contrast-high *:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
   html {
     scroll-behavior: smooth;
   }

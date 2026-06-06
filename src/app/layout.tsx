@@ -52,6 +52,7 @@ const themeScript = `
     var stored = localStorage.getItem('fgc-theme');
     var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
     if (dark) document.documentElement.classList.add('dark');
+    if (localStorage.getItem('fgc-contrast') === 'high') document.documentElement.classList.add('contrast-high');
   } catch (e) {}
 })();
 `;

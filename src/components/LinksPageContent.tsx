@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ContrastToggle } from "@/components/ContrastToggle";
 import type { LinkInBioButton } from "@/lib/site-data";
 import { linkInBioContent, siteConfig, uxLabels } from "@/lib/site-data";
 
@@ -15,7 +16,8 @@ export function LinksPageContent({ locale }: LinksPageContentProps) {
 
   return (
     <div className="relative min-h-screen bg-page">
-      <div className="absolute right-5 top-5">
+      <div className="absolute right-5 top-5 flex items-center gap-2">
+        <ContrastToggle locale={locale} />
         <ThemeToggle locale={locale} />
       </div>
 

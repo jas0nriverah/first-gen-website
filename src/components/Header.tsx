@@ -6,6 +6,7 @@ import { useState } from "react";
 import { getAlternateLocaleHref } from "@/lib/locale-routes";
 import { navLinksEn, navLinksEs, siteConfig, uxLabels } from "@/lib/site-data";
 import { ThemeToggle } from "./ThemeToggle";
+import { ContrastToggle } from "./ContrastToggle";
 
 type HeaderProps = {
   locale?: "en" | "es";
@@ -69,6 +70,7 @@ export function Header({ locale = "en" }: HeaderProps) {
               </Link>
             </nav>
 
+            <ContrastToggle locale={locale} />
             <ThemeToggle locale={locale} />
 
             <button
