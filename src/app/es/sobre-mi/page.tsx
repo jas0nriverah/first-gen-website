@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { AboutSections } from "@/components/AboutSections";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { PageHero } from "@/components/PageHero";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Button } from "@/components/Button";
 import { aboutContent } from "@/lib/site-data";
 
@@ -23,22 +25,23 @@ export default function SobreMiPage() {
         <div className="section-container">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-2">
-              <PlaceholderImage label={content.photoPlaceholder} aspectRatio="portrait" />
-            </div>
-
-            <div className="lg:col-span-3">
-              <div className="space-y-5">
-                {content.paragraphs.map((paragraph, i) => (
-                  <p
-                    key={paragraph.slice(0, 40)}
-                    className={`leading-relaxed ${i === 0 ? "text-lg font-medium text-ink" : "text-base text-muted"}`}
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border">
+                <Image
+                  src={content.heroImage.src}
+                  alt={content.heroImage.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
               </div>
 
-              <dl className="mt-10 grid gap-3 sm:grid-cols-2">
+              <div className="mt-8">
+                <p className="mb-3 text-sm font-medium text-ink">{content.connectTitle}</p>
+                <SocialLinks variant="large" />
+              </div>
+
+              <dl className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                 {content.facts.map((fact) => (
                   <div key={fact.label} className="rounded-xl border border-border p-4">
                     <dt className="text-xs font-medium uppercase tracking-wider text-muted">
@@ -48,8 +51,12 @@ export default function SobreMiPage() {
                   </div>
                 ))}
               </dl>
+            </div>
 
-              <div className="mt-10 flex flex-wrap gap-3">
+            <div className="lg:col-span-3">
+              <AboutSections sections={content.sections} />
+
+              <div className="mt-12 flex flex-wrap gap-3">
                 <Button href="/es/recursos" variant="primary">
                   Ver recursos
                 </Button>

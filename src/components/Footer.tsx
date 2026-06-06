@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "./SocialLinks";
 import { footerContent, navLinksEn, navLinksEs, siteConfig } from "@/lib/site-data";
 
 type FooterProps = {
@@ -15,7 +16,7 @@ export function Footer({ locale = "en" }: FooterProps) {
   return (
     <footer className="border-t border-border bg-inverse text-inverse-foreground">
       <div className="section-container py-16 sm:py-20">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href={homeHref} className="text-base font-semibold text-inverse-foreground">
               {siteConfig.name}
@@ -94,6 +95,13 @@ export function Footer({ locale = "en" }: FooterProps) {
               {siteConfig.email}
             </a>
             <p className="mt-6 text-xs text-footer-subtle">{content.credit}</p>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-footer-subtle">
+              {content.socialTitle}
+            </h3>
+            <SocialLinks variant="footer" />
           </div>
         </div>
 

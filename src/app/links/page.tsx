@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SocialLinks } from "@/components/SocialLinks";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { linkInBioButtons, siteConfig } from "@/lib/site-data";
 
@@ -27,7 +28,11 @@ export default function LinksPage() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-sm flex-col gap-2.5">
+        <div className="mx-auto mt-8 flex justify-center">
+          <SocialLinks variant="large" />
+        </div>
+
+        <div className="mx-auto mt-8 flex max-w-sm flex-col gap-2.5">
           {linkInBioButtons.map((button) => {
             if (button.comingSoon) {
               return (

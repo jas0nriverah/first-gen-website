@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Button } from "@/components/Button";
 import { contactContent, siteConfig } from "@/lib/site-data";
 
@@ -34,6 +35,10 @@ export default function ContactPage() {
                 </Button>
               </div>
               <p className="mt-6 text-xs text-muted-light">{content.responseNote}</p>
+              <div className="mt-6 border-t border-border pt-6">
+                <p className="mb-3 text-sm font-medium text-ink">Follow along</p>
+                <SocialLinks />
+              </div>
             </div>
 
             <div className="card-static">

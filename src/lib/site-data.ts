@@ -13,6 +13,12 @@ export const siteConfig = {
   nameEs: "First Gen Chronicles",
   creator: "Stacy Lomeli",
   email: "stacylomeli.biz@gmail.com",
+  // Social profiles — edit URLs here
+  social: {
+    linkedin: "https://www.linkedin.com/in/stacylomeli/",
+    instagram: "https://www.instagram.com/sta.acyy_/",
+    tiktok: "https://www.tiktok.com/@staccy.lomeli",
+  },
   tagline:
     "Guidance for first-generation students and Hispanic families navigating school, college, and beyond.",
   taglineEs:
@@ -183,43 +189,203 @@ export const pathways = {
   ],
 };
 
+// ─── SOCIAL LINKS ──────────────────────────────────────────────────────────────
+// Edit profile URLs here. Icons appear in the footer, About, Contact, and /links.
+
+export const socialLinks = [
+  {
+    platform: "linkedin" as const,
+    href: siteConfig.social.linkedin,
+    label: "LinkedIn",
+  },
+  {
+    platform: "instagram" as const,
+    href: siteConfig.social.instagram,
+    label: "Instagram",
+  },
+  {
+    platform: "tiktok" as const,
+    href: siteConfig.social.tiktok,
+    label: "TikTok",
+  },
+];
+
+export type AboutSection = {
+  id: string;
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+  images?: { src: string; alt: string }[];
+};
+
 // ─── ABOUT STACY ───────────────────────────────────────────────────────────────
-// Edit Stacy's story here. Keep facts accurate — do not invent personal details.
+// Edit Stacy's story here. Content migrated from her original About page.
+// Keep facts accurate — do not invent personal details.
 
 export const aboutContent = {
   en: {
     pageTitle: "About Stacy",
     headline: "Built by a first-gen student, for first-gen students",
-    paragraphs: [
-      "Hi — I'm Stacy Lomeli, a first-generation Mexican-American student at Georgia Tech studying neuroscience on the pre-med track.",
-      "My parents were born in Mexico, and I grew up navigating two languages and two cultures. From translating FAFSA forms for my family to figuring out college applications on my own, I know what it feels like to be the first person in your family to walk this path.",
-      "As a first-gen Latina, I've experienced the confusion, the wins, and everything in between. Those experiences are what motivated me to create First Gen Chronicles — so students and families don't have to figure everything out alone.",
-      "Through this site, I share the guidance, resources, and encouragement I wish I had when I was starting out. Whether you're in high school, college, or supporting a student as a parent, I hope you find something here that helps you feel more confident and supported.",
-    ],
+    heroImage: {
+      src: "/images/about/stacy-lab-coat.png",
+      alt: "Stacy Lomeli in a white lab coat with a stethoscope",
+    },
+    connectTitle: "Connect with me",
+    sections: [
+      {
+        id: "who-i-am",
+        title: "Who I am",
+        paragraphs: [
+          "Hi — I'm Stacy Lomeli, a first-generation Mexican-American student. My parents were born in Mexico, and their journey has shaped everything about who I am and how I see education.",
+          "I grew up in Indiana before my family moved to Atlanta, Georgia. Navigating two languages and two cultures taught me resilience, adaptability, and the importance of community — lessons that still guide me today.",
+        ],
+        images: [
+          { src: "/images/about/family-birthday.png", alt: "Stacy's family at a birthday celebration" },
+          { src: "/images/about/family-chicago.png", alt: "Stacy's family with the Chicago skyline" },
+          { src: "/images/about/graduation-family.png", alt: "Stacy at high school graduation with her family" },
+        ],
+      },
+      {
+        id: "journey-medicine",
+        title: "My journey into medicine",
+        paragraphs: [
+          "My interest in medicine began in high school when I joined the Academy of Research and Medical Sciences. That program opened doors I didn't know existed — and showed me that a career in health was possible for someone like me.",
+          "Through that experience, I completed two scientific research projects, a clinical internship, and founded my own volunteering club, The Helping Hands. My high school was Title I, which meant I often had to find internships, scholarships, and opportunities on my own.",
+          "That experience is a huge part of why I'm doing this — I know what it feels like to navigate systems without a guide.",
+        ],
+        images: [
+          { src: "/images/about/lab-coat-group.png", alt: "Stacy with peers in lab coats" },
+          { src: "/images/about/stacy-lab-coat.png", alt: "Stacy in a lab coat outdoors" },
+        ],
+      },
+      {
+        id: "where-now",
+        title: "Where I am now",
+        paragraphs: [
+          "Today, I'm a first-generation Latina studying neuroscience on the pre-med track at the Georgia Institute of Technology.",
+          "Being first-gen comes with pressure — you're often the one your family looks to for answers. In many of my classes, I don't see many people who look like me or share my background. I want to be the representation I didn't always have, especially for younger Latinas who are wondering if they belong in spaces like medicine and research.",
+        ],
+        images: [
+          { src: "/images/about/gt-celebration.png", alt: "Stacy celebrating her Georgia Tech acceptance" },
+        ],
+      },
+      {
+        id: "giving-back",
+        title: "Giving back to my community",
+        paragraphs: [
+          "One of the most meaningful experiences I've had was serving as a panelist and mentor at the 2025 Navigating Your Academic and Professional Future Summit, hosted by the Hispanic Heritage Foundation.",
+          "I shared my story with Latino students — many of them first-generation or non-English speakers — and reminded them that they belong in every room they walk into. Our community deserves guidance, support, and access — in English and in Spanish.",
+        ],
+        images: [
+          { src: "/images/about/hhf-speaking.png", alt: "Stacy speaking at the Hispanic Heritage Foundation summit" },
+          { src: "/images/about/hhf-group.png", alt: "Stacy with fellow panelists at the Hispanic Heritage Foundation" },
+        ],
+      },
+      {
+        id: "why-fgc",
+        title: "Why I created First Gen Chronicles",
+        paragraphs: [
+          "First Gen Chronicles exists because I remember how overwhelming it felt to figure out college, financial aid, opportunities, and the pre-med path without a roadmap.",
+          "My goal is simple: to make sure no first-gen student has to figure everything out alone.",
+          "I'm excited to keep building this platform and supporting students and families who are walking the same path I once did — and still am.",
+        ],
+        bullets: [
+          "The advice I wish someone had given me",
+          "Opportunities I didn't know about",
+          "Lessons I learned through trial and error",
+          "Guidance for high school, college, and pre-med life",
+          "Resources in English and Spanish, so families can understand too",
+        ],
+      },
+    ] as AboutSection[],
     facts: [
       { label: "Background", value: "First-generation Mexican-American" },
       { label: "Major", value: "Neuroscience" },
       { label: "Track", value: "Pre-med" },
       { label: "School", value: "Georgia Institute of Technology" },
     ],
-    photoPlaceholder: "Photo of Stacy — add your approved photo here",
   },
   es: {
     pageTitle: "Sobre Mí",
     headline: "Creado por una estudiante de primera generación, para estudiantes de primera generación",
-    paragraphs: [
-      "Hola — soy Stacy Lomeli, una estudiante mexicoamericana de primera generación en Georgia Tech, estudiando neurociencia en la ruta pre-medicina.",
-      "Mis padres nacieron en México, y crecí navegando dos idiomas y dos culturas. Desde traducir formularios de FAFSA para mi familia hasta descubrir las solicitudes universitarias por mi cuenta, sé lo que se siente ser la primera persona en tu familia en recorrer este camino.",
-      "Como latina de primera generación, he vivido la confusión, los logros y todo lo que hay en el medio. Esas experiencias me motivaron a crear First Gen Chronicles — para que estudiantes y familias no tengan que descubrir todo solos/as.",
-      "A través de este sitio, comparto la orientación, los recursos y el ánimo que a mí me hubiera gustado tener cuando comencé. Ya sea que estés en la escuela secundaria, la universidad, o apoyando a un estudiante como padre/madre, espero que encuentres algo aquí que te ayude a sentirte más seguro/a y apoyado/a.",
-    ],
+    heroImage: {
+      src: "/images/about/stacy-lab-coat.png",
+      alt: "Stacy Lomeli con bata de laboratorio y estetoscopio",
+    },
+    connectTitle: "Conéctate conmigo",
+    sections: [
+      {
+        id: "quien-soy",
+        title: "Quién soy",
+        paragraphs: [
+          "Hola — soy Stacy Lomeli, una estudiante mexicoamericana de primera generación. Mis padres nacieron en México, y su camino ha moldeado todo lo que soy y cómo veo la educación.",
+          "Crecí en Indiana antes de que mi familia se mudara a Atlanta, Georgia. Navegar dos idiomas y dos culturas me enseñó resiliencia, adaptabilidad y la importancia de la comunidad — lecciones que aún me guían hoy.",
+        ],
+        images: [
+          { src: "/images/about/family-birthday.png", alt: "La familia de Stacy en una celebración de cumpleaños" },
+          { src: "/images/about/family-chicago.png", alt: "La familia de Stacy con el horizonte de Chicago" },
+          { src: "/images/about/graduation-family.png", alt: "Stacy en su graduación de secundaria con su familia" },
+        ],
+      },
+      {
+        id: "camino-medicina",
+        title: "Mi camino hacia la medicina",
+        paragraphs: [
+          "Mi interés en la medicina comenzó en la escuela secundaria cuando me uní a la Academy of Research and Medical Sciences. Ese programa abrió puertas que no sabía que existían — y me mostró que una carrera en salud era posible para alguien como yo.",
+          "A través de esa experiencia, completé dos proyectos de investigación científica, una pasantía clínica y fundé mi propio club de voluntariado, The Helping Hands. Mi escuela secundaria era Title I, lo que significaba que a menudo tenía que encontrar pasantías, becas y oportunidades por mi cuenta.",
+          "Esa experiencia es una gran parte de por qué hago esto — sé lo que se siente navegar sistemas sin una guía.",
+        ],
+        images: [
+          { src: "/images/about/lab-coat-group.png", alt: "Stacy con compañeros en batas de laboratorio" },
+          { src: "/images/about/stacy-lab-coat.png", alt: "Stacy con bata de laboratorio al aire libre" },
+        ],
+      },
+      {
+        id: "donde-estoy",
+        title: "Dónde estoy ahora",
+        paragraphs: [
+          "Hoy, soy una latina de primera generación estudiando neurociencia en la ruta pre-medicina en el Georgia Institute of Technology.",
+          "Ser de primera generación trae presión — a menudo eres la persona a la que tu familia recurre para respuestas. En muchas de mis clases, no veo muchas personas que se parezcan a mí o compartan mi origen. Quiero ser la representación que no siempre tuve, especialmente para las latinas más jóvenes que se preguntan si pertenecen en espacios como la medicina y la investigación.",
+        ],
+        images: [
+          { src: "/images/about/gt-celebration.png", alt: "Stacy celebrando su aceptación a Georgia Tech" },
+        ],
+      },
+      {
+        id: "dar-vuelta",
+        title: "Devolver a mi comunidad",
+        paragraphs: [
+          "Una de las experiencias más significativas que he tenido fue servir como panelista y mentora en el Navigating Your Academic and Professional Future Summit 2025, organizado por la Hispanic Heritage Foundation.",
+          "Compartí mi historia con estudiantes latinos — muchos de primera generación o que no hablan inglés — y les recordé que pertenecen en cada espacio al que entran. Nuestra comunidad merece orientación, apoyo y acceso — en inglés y en español.",
+        ],
+        images: [
+          { src: "/images/about/hhf-speaking.png", alt: "Stacy hablando en la cumbre de la Hispanic Heritage Foundation" },
+          { src: "/images/about/hhf-group.png", alt: "Stacy con otros panelistas de la Hispanic Heritage Foundation" },
+        ],
+      },
+      {
+        id: "por-que-fgc",
+        title: "Por qué creé First Gen Chronicles",
+        paragraphs: [
+          "First Gen Chronicles existe porque recuerdo lo abrumador que se sintió descubrir la universidad, la ayuda financiera, las oportunidades y la ruta pre-medicina sin un mapa.",
+          "Mi meta es simple: asegurarme de que ningún estudiante de primera generación tenga que descubrir todo solo/a.",
+          "Estoy emocionada de seguir construyendo esta plataforma y apoyando a estudiantes y familias que están recorriendo el mismo camino que yo recorrí — y aún recorro.",
+        ],
+        bullets: [
+          "Los consejos que desearía que alguien me hubiera dado",
+          "Oportunidades que no conocía",
+          "Lecciones que aprendí a través de prueba y error",
+          "Orientación para la secundaria, la universidad y la vida pre-medicina",
+          "Recursos en inglés y español, para que las familias también entiendan",
+        ],
+      },
+    ] as AboutSection[],
     facts: [
       { label: "Origen", value: "Mexicoamericana de primera generación" },
       { label: "Carrera", value: "Neurociencia" },
       { label: "Ruta", value: "Pre-medicina" },
       { label: "Universidad", value: "Georgia Institute of Technology" },
     ],
-    photoPlaceholder: "Foto de Stacy — agrega tu foto aprobada aquí",
   },
 };
 
@@ -660,6 +826,7 @@ export const footerContent = {
     quickLinksTitle: "Quick Links",
     languageTitle: "Language",
     contactTitle: "Contact",
+    socialTitle: "Follow",
     credit: "Created by Stacy Lomeli",
   },
   es: {
@@ -668,6 +835,7 @@ export const footerContent = {
     quickLinksTitle: "Enlaces Rápidos",
     languageTitle: "Idioma",
     contactTitle: "Contacto",
+    socialTitle: "Sígueme",
     credit: "Creado por Stacy Lomeli",
   },
 };
