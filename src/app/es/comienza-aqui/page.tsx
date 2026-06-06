@@ -19,8 +19,12 @@ export default function ComienzaAquiPage() {
         title="Comienza Aquí"
         subtitle="¿No sabes por dónde empezar? Elige el camino que coincida con donde estás — o hacia dónde quieres ir."
       />
-      <Breadcrumbs items={[{ label: "Comienza Aquí" }]} locale="es" />
-      <StartHereNav locale="es" />
+      <div className="border-b border-border bg-background">
+        <div className="section-container space-y-4 py-6 sm:py-8">
+          <Breadcrumbs items={[{ label: "Comienza Aquí" }]} locale="es" embedded />
+          <StartHereNav locale="es" embedded />
+        </div>
+      </div>
 
       <div className="section-padding">
         <div className="section-container">

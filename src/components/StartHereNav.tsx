@@ -2,16 +2,17 @@ import { pathways } from "@/lib/site-data";
 
 type StartHereNavProps = {
   locale?: "en" | "es";
+  embedded?: boolean;
 };
 
-export function StartHereNav({ locale = "en" }: StartHereNavProps) {
+export function StartHereNav({ locale = "en", embedded = false }: StartHereNavProps) {
   const items = pathways[locale];
   const label = locale === "es" ? "Elige tu camino" : "Choose your path";
 
   return (
     <nav
       aria-label={label}
-      className="section-container -mt-6 mb-10 flex flex-wrap gap-2"
+      className={`flex flex-wrap gap-2 ${embedded ? "" : "section-container mb-10"}`}
     >
       {items.map((item) => (
         <a

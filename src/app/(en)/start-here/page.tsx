@@ -18,8 +18,12 @@ export default function StartHerePage() {
         title="Start Here"
         subtitle="Not sure where to begin? Choose the pathway that matches where you are — or where you want to go."
       />
-      <Breadcrumbs items={[{ label: "Start Here" }]} locale="en" />
-      <StartHereNav locale="en" />
+      <div className="border-b border-border bg-background">
+        <div className="section-container space-y-4 py-6 sm:py-8">
+          <Breadcrumbs items={[{ label: "Start Here" }]} locale="en" embedded />
+          <StartHereNav locale="en" embedded />
+        </div>
+      </div>
 
       <div className="section-padding">
         <div className="section-container">

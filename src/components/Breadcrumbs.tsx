@@ -9,11 +9,15 @@ type BreadcrumbItem = {
 type BreadcrumbsProps = {
   items: BreadcrumbItem[];
   locale?: "en" | "es";
+  embedded?: boolean;
 };
 
-export function Breadcrumbs({ items, locale = "en" }: BreadcrumbsProps) {
+export function Breadcrumbs({ items, locale = "en", embedded = false }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="section-container py-4">
+    <nav
+      aria-label="Breadcrumb"
+      className={embedded ? undefined : "section-container py-4"}
+    >
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted">
         <li>
           <Link
