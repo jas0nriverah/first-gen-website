@@ -52,13 +52,13 @@ export function Hero({
             <Button href={startHref} variant="primary">
               {ctaStart}
             </Button>
-            <Button href={resourcesHref} variant="outline">
+            <Button href={resourcesHref} variant="primary">
               {ctaResources}
             </Button>
-            <Button href={aboutHref} variant="ghost">
+            <Button href={aboutHref} variant="primary">
               {ctaAbout}
             </Button>
-            <Button href={contactHref} variant="ghost">
+            <Button href={contactHref} variant="primary">
               {ctaContact}
             </Button>
           </div>
