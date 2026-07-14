@@ -25,12 +25,12 @@ export default function SobreMiPage() {
         <div className="section-container">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-2">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border">
+              <div className="group relative aspect-[3/4] overflow-hidden rounded-3xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-hover">
                 <Image
                   src={content.heroImage.src}
                   alt={content.heroImage.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority
                 />
@@ -43,7 +43,7 @@ export default function SobreMiPage() {
 
               <dl className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                 {content.facts.map((fact) => (
-                  <div key={fact.label} className="rounded-xl border border-border p-4">
+                  <div key={fact.label} className="rounded-2xl border border-border bg-card p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-hover">
                     <dt className="text-xs font-medium uppercase tracking-wider text-muted">
                       {fact.label}
                     </dt>

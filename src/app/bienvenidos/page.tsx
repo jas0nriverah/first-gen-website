@@ -3,6 +3,7 @@ import { BilingualBanner } from "@/components/BilingualBanner";
 import { Button } from "@/components/Button";
 import { FamilyCallout } from "@/components/FamilyCallout";
 import { Hero } from "@/components/Hero";
+import { HomePhotoGallery } from "@/components/HomePhotoGallery";
 import { PathwayCard } from "@/components/PathwayCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { homeContent, pathways } from "@/lib/site-data";
@@ -54,8 +55,14 @@ export default function BienvenidosPage() {
             centered
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {pathways.es.map((pathway) => (
-              <PathwayCard key={pathway.title} {...pathway} exploreLabel="Explorar" />
+            {pathways.es.map((pathway, index) => (
+              <div
+                key={pathway.title}
+                className="animate-fade-up"
+                style={{ animationDelay: `${index * 60}ms` }}
+              >
+                <PathwayCard {...pathway} exploreLabel="Explorar" />
+              </div>
             ))}
           </div>
           <div className="mt-10 text-center">
@@ -66,6 +73,8 @@ export default function BienvenidosPage() {
         </div>
       </section>
 
+      <HomePhotoGallery locale="es" />
+
       <BilingualBanner
         title={content.bilingualTitle}
         text={content.bilingualText}
@@ -74,7 +83,7 @@ export default function BienvenidosPage() {
 
       <section className="section-padding">
         <div className="section-container">
-          <div className="mx-auto max-w-xl rounded-3xl border border-border bg-accent-muted/70 p-10 text-center shadow-sm sm:p-12">
+          <div className="mx-auto max-w-xl rounded-3xl border border-border bg-accent-muted/70 p-10 text-center shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-hover sm:p-12">
             <p className="font-display text-lg leading-relaxed text-ink sm:text-xl">
               {content.welcomeClosing}
             </p>
