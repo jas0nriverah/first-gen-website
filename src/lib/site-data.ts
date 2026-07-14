@@ -539,8 +539,41 @@ export const resourceCategories = {
       title: "College Applications",
       description: "Step-by-step guidance for applying to college as a first-gen student.",
       links: [
-        { title: "Application timeline checklist", description: "A semester-by-semester guide for high school juniors and seniors.", comingSoon: true },
-        { title: "Common App basics", description: "What to know before you start your application.", comingSoon: true },
+        {
+          title: "Your path to college checklists",
+          description: "Free year-by-year checklists from Common App — middle school through senior year.",
+          href: "https://www.commonapp.org/plan/your-path-to-college",
+        },
+        {
+          title: "Common App first-year student guide",
+          description: "How to build and submit your first-year college application.",
+          href: "https://www.commonapp.org/apply/first-year-students",
+        },
+        {
+          title: "Start your Common App",
+          description: "Create an account and begin applying to 1,000+ colleges in one place.",
+          href: "https://www.commonapp.org/",
+        },
+        {
+          title: "College application toolkit (EN + ES)",
+          description: "Common App resources for students in English and Spanish.",
+          href: "https://www.commonapp.org/apply/fy-toolkit",
+        },
+        {
+          title: "College Scorecard",
+          description: "Compare colleges by cost, graduation rates, and outcomes — from the U.S. Department of Education.",
+          href: "https://collegescorecard.ed.gov/",
+        },
+        {
+          title: "Register for the SAT",
+          description: "Official College Board registration for the SAT.",
+          href: "https://satsuite.collegeboard.org/sat/registration",
+        },
+        {
+          title: "Register for the ACT",
+          description: "Official ACT registration, dates, and test-center search.",
+          href: "https://www.act.org/content/act/en/products-and-services/the-act/registration.html",
+        },
       ],
     },
     {
@@ -548,8 +581,26 @@ export const resourceCategories = {
       title: "Essays & Recommendation Letters",
       description: "Tips for personal statements, supplemental essays, and strong recommendations.",
       links: [
-        { title: "How to approach your personal essay", description: "Finding your story without overthinking it.", comingSoon: true },
-        { title: "Asking for recommendation letters", description: "Who to ask, when to ask, and how to make it easy for your teachers.", comingSoon: true },
+        {
+          title: "Common App essay prompts",
+          description: "This year’s personal essay prompts — read them before you start drafting.",
+          href: "https://www.commonapp.org/apply/essay-prompts",
+        },
+        {
+          title: "Counselors & recommenders guide",
+          description: "How teachers and counselors submit recommendations in Common App.",
+          href: "https://www.commonapp.org/counselors-and-recommenders",
+        },
+        {
+          title: "First-year application guide",
+          description: "Walkthrough of sections you’ll complete — including essays and school forms.",
+          href: "https://www.commonapp.org/apply/first-year-students",
+        },
+        {
+          title: "College applications help (Get Schooled)",
+          description: "Free step-by-step articles on applying to college.",
+          href: "https://getschooled.com/journey/get-to-college/",
+        },
       ],
     },
     {
@@ -557,8 +608,51 @@ export const resourceCategories = {
       title: "Scholarships & Financial Aid",
       description: "Finding and applying for scholarships as a first-generation student.",
       links: [
-        { title: "Scholarship search strategies", description: "Where to look and how to stay organized.", comingSoon: true },
-        { title: "First-gen scholarship list", description: "Scholarships specifically for first-generation students.", comingSoon: true },
+        {
+          title: "BigFuture Scholarship Search",
+          description: "Search thousands of scholarships from College Board’s free planning site.",
+          href: "https://bigfuture.collegeboard.org/pay-for-college/scholarship-search",
+        },
+        {
+          title: "GAfutures Scholarship Search",
+          description: "Find Georgia and national scholarships through the official GAfutures tool.",
+          href: "https://www.gafutures.org/federal-aid-scholarships/scholarship-search/",
+        },
+        {
+          title: "Georgia HOPE Scholarship",
+          description: "Official info on Georgia’s HOPE Scholarship — eligibility and how it helps with tuition.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/hope-zell-miller-scholarships/hope-scholarship",
+        },
+        {
+          title: "Track your High School HOPE GPA",
+          description: "Check your HOPE GPA in your GAfutures account (Georgia high school students).",
+          href: "https://www.gafutures.org/hope-state-aid-programs/hope-zell-miller-scholarships/how-to-track-your-hope-academic-eligibility/my-high-school-hope-gpa/",
+        },
+        {
+          title: "Hispanic Scholarship Fund (HSF)",
+          description: "Scholarships and support services for students of Hispanic heritage.",
+          href: "https://www.hsf.net/",
+        },
+        {
+          title: "QuestBridge College Prep Scholars",
+          description: "Program for high-achieving high school juniors from low-income backgrounds.",
+          href: "https://www.questbridge.org/apply-to-college/programs/college-prep-scholars-program",
+        },
+        {
+          title: "Types of federal student aid",
+          description: "Grants, scholarships, work-study, and loans explained by Federal Student Aid.",
+          href: "https://studentaid.gov/understand-aid/types",
+        },
+        {
+          title: "Federal Pell Grant",
+          description: "Learn about Pell Grants — free aid that does not need to be repaid.",
+          href: "https://studentaid.gov/understand-aid/types/grants/pell",
+        },
+        {
+          title: "BigFuture Scholarships",
+          description: "Complete free planning steps for chances at $500 and $40,000 scholarships.",
+          href: "https://bigfuture.collegeboard.org/pay-for-college/bigfuture-scholarships",
+        },
       ],
     },
     {
@@ -566,8 +660,31 @@ export const resourceCategories = {
       title: "FAFSA Basics",
       description: "Understanding financial aid forms, deadlines, and what families need to know.",
       links: [
-        { title: "FAFSA step-by-step overview", description: "A plain-language walkthrough of the financial aid process.", comingSoon: true },
-        { title: "FAFSA for Spanish-speaking families", description: "Key terms and steps explained in accessible Spanish.", comingSoon: true },
+        {
+          title: "Fill out the FAFSA®",
+          description: "The official free federal student aid application — never pay a site to file it.",
+          href: "https://studentaid.gov/h/apply-for-aid/fafsa",
+        },
+        {
+          title: "Create your StudentAid.gov account",
+          description: "You’ll need an account (FSA ID) before you and your parent can complete the FAFSA.",
+          href: "https://studentaid.gov/fsa-id/create-account/launch",
+        },
+        {
+          title: "How to fill out the FAFSA (English)",
+          description: "Step-by-step help from Federal Student Aid on completing the form.",
+          href: "https://studentaid.gov/apply-for-aid/fafsa/filling-out",
+        },
+        {
+          title: "Cómo llenar el formulario FAFSA (Español)",
+          description: "Explicación oficial en español para estudiantes y familias.",
+          href: "https://studentaid.gov/es/apply-for-aid/fafsa/filling-out",
+        },
+        {
+          title: "FAFSA deadlines",
+          description: "Federal, state, and college deadlines — apply early so you don’t miss aid.",
+          href: "https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines",
+        },
       ],
     },
     {
@@ -575,7 +692,26 @@ export const resourceCategories = {
       title: "Dual Enrollment",
       description: "Earn college credit while still in high school.",
       links: [
-        { title: "Is dual enrollment right for you?", description: "Pros, cons, and questions to ask your counselor.", comingSoon: true },
+        {
+          title: "Georgia Dual Enrollment (GAfutures)",
+          description: "Official Georgia program overview — eligibility, funding, and how to apply.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/scholarships-grants/dual-enrollment/",
+        },
+        {
+          title: "Dual Enrollment application steps",
+          description: "What students and families need to complete on GAfutures.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/scholarships-grants/dual-enrollment/application-procedure",
+        },
+        {
+          title: "Dual Enrollment course directory",
+          description: "Browse approved Dual Enrollment courses for Georgia’s program.",
+          href: "https://www.gafutures.org/checs/dualenrollment/decoursedirectory",
+        },
+        {
+          title: "Is dual enrollment right for you?",
+          description: "Pros, cons, and questions to ask your counselor.",
+          comingSoon: true,
+        },
       ],
     },
     {
@@ -583,8 +719,46 @@ export const resourceCategories = {
       title: "Internships & Programs",
       description: "Leadership roles, summer programs, and experiences that strengthen your path.",
       links: [
-        { title: "How to find programs early", description: "Starting your search before senior year.", comingSoon: true },
-        { title: "Building a strong resume", description: "Activities and experiences that matter.", comingSoon: true },
+        {
+          title: "Explore colleges on Common App",
+          description: "Search and learn about 1,000+ colleges — great for building your list early.",
+          href: "https://www.commonapp.org/explore",
+        },
+        {
+          title: "BigFuture college planning",
+          description: "Free tools to explore colleges, majors, careers, and next steps after high school.",
+          href: "https://bigfuture.collegeboard.org/",
+        },
+        {
+          title: "QuestBridge programs",
+          description: "Opportunities connecting high-achieving students from low-income backgrounds with top colleges.",
+          href: "https://www.questbridge.org/",
+        },
+        {
+          title: "Get Schooled — Get to College",
+          description: "Free college-planning articles, tips, and text support for students.",
+          href: "https://getschooled.com/journey/get-to-college/",
+        },
+        {
+          title: "Jobs for high schoolers (Get Schooled)",
+          description: "Where to look, what you’ll need, and how to build a first resume.",
+          href: "https://getschooled.com/",
+        },
+        {
+          title: "AP Student (College Board)",
+          description: "Official resources for Advanced Placement courses and exams.",
+          href: "https://apstudents.collegeboard.org/",
+        },
+        {
+          title: "SAT fee waivers",
+          description: "Learn if you qualify to take the SAT for free and access other College Board benefits.",
+          href: "https://satsuite.collegeboard.org/sat/registration/fee-waivers",
+        },
+        {
+          title: "College Scorecard",
+          description: "Research colleges before you apply — costs, graduation rates, and earnings data.",
+          href: "https://collegescorecard.ed.gov/",
+        },
       ],
     },
     {
@@ -592,7 +766,21 @@ export const resourceCategories = {
       title: "Research Opportunities",
       description: "Getting involved in research as an undergraduate student.",
       links: [
-        { title: "Finding research labs", description: "How to reach out and get started.", comingSoon: true },
+        {
+          title: "Georgia Tech Undergraduate Research",
+          description: "Campus research opportunities, programs, and how to get involved at GT.",
+          href: "https://undergradresearch.gatech.edu/",
+        },
+        {
+          title: "Undergraduate research funding at GT",
+          description: "PURA awards and other funding options for student researchers.",
+          href: "https://undergradresearch.gatech.edu/funding/",
+        },
+        {
+          title: "NSF Research Experiences for Undergraduates (REU)",
+          description: "Search summer research programs at universities across the U.S.",
+          href: "https://www.nsf.gov/crssprgm/reu/reu_search.cfm",
+        },
       ],
     },
     {
@@ -600,8 +788,31 @@ export const resourceCategories = {
       title: "Pre-Med / Pre-Health",
       description: "Navigating the pre-health track as a first-generation student.",
       links: [
-        { title: "Pre-med basics at Georgia Tech", description: "Course planning and early steps.", comingSoon: true },
-        { title: "Clinical and shadowing experience", description: "How to find opportunities and what to expect.", comingSoon: true },
+        {
+          title: "Georgia Tech Pre-Health Advising",
+          description: "Official GT advising for pre-med, dental, pharmacy, and other health careers.",
+          href: "https://www.prehealth.gatech.edu/",
+        },
+        {
+          title: "AAMC Aspiring Docs",
+          description: "Free guides and stories to help you start preparing for a path to medicine.",
+          href: "https://students-residents.aamc.org/aspiring-docs/aspiring-docs",
+        },
+        {
+          title: "AAMC Students & Residents hub",
+          description: "Trusted resources for exploring medical careers, applications, and preparation.",
+          href: "https://students-residents.aamc.org/",
+        },
+        {
+          title: "MCAT preparation overview (AAMC)",
+          description: "Official information on preparing for the MCAT exam.",
+          href: "https://students-residents.aamc.org/mcat-prep/mcat-prep",
+        },
+        {
+          title: "GT catalog: Preprofessional programs",
+          description: "How Georgia Tech approaches pre-health (and other preprofessional) pathways.",
+          href: "https://catalog.gatech.edu/academics/special-academic-programs/preprofessional-programs/",
+        },
       ],
     },
     {
@@ -609,8 +820,26 @@ export const resourceCategories = {
       title: "Study Skills & College Life",
       description: "Strategies that work, time management, and adjusting to campus.",
       links: [
-        { title: "Study strategies that actually work", description: "What I learned after trial and error.", comingSoon: true },
-        { title: "Finding community on campus", description: "Clubs, organizations, and support networks.", comingSoon: true },
+        {
+          title: "Get Schooled — Starting college strong",
+          description: "Tips for orientation, classes, and finishing financial aid as a new college student.",
+          href: "https://getschooled.com/journey/get-to-college/",
+        },
+        {
+          title: "Khan Academy",
+          description: "Free practice and lessons for many high school and college subjects.",
+          href: "https://www.khanacademy.org/",
+        },
+        {
+          title: "Georgia Tech Career Center",
+          description: "Internships, career coaching, and job resources for GT students.",
+          href: "https://career.gatech.edu/",
+        },
+        {
+          title: "Federal Student Aid — Manage your aid",
+          description: "Understand grants, loans, and repayment basics once you’re in college.",
+          href: "https://studentaid.gov/manage-loans",
+        },
       ],
     },
     {
@@ -618,8 +847,36 @@ export const resourceCategories = {
       title: "Spanish Resources for Families",
       description: "Information designed for Spanish-dominant parents and families.",
       links: [
-        { title: "Guía para padres: apoyar a su estudiante", description: "Cómo apoyar el camino universitario de su hijo/a.", comingSoon: true },
-        { title: "Términos clave de ayuda financiera", description: "Vocabulario esencial explicado en español.", comingSoon: true },
+        {
+          title: "Common App for families",
+          description: "Tips for families supporting students through the college application process.",
+          href: "https://www.commonapp.org/family",
+        },
+        {
+          title: "Cómo llenar el formulario FAFSA",
+          description: "Guía oficial en español de Ayuda Federal para Estudiantes.",
+          href: "https://studentaid.gov/es/apply-for-aid/fafsa/filling-out",
+        },
+        {
+          title: "Fechas límite de la FAFSA",
+          description: "Plazos importantes para no perder ayuda federal o estatal.",
+          href: "https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines",
+        },
+        {
+          title: "Tipos de ayuda federal para estudiantes",
+          description: "Becas, grants, work-study y préstamos explicados claramente.",
+          href: "https://studentaid.gov/understand-aid/types",
+        },
+        {
+          title: "Georgia HOPE Scholarship",
+          description: "Información oficial de la beca HOPE para estudiantes de Georgia.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/hope-zell-miller-scholarships/hope-scholarship",
+        },
+        {
+          title: "College Scorecard",
+          description: "Compara universidades por costo y resultados antes de decidir.",
+          href: "https://collegescorecard.ed.gov/",
+        },
       ],
     },
   ] as ResourceCategory[],
@@ -629,8 +886,41 @@ export const resourceCategories = {
       title: "Solicitudes Universitarias",
       description: "Guía paso a paso para aplicar a la universidad como estudiante de primera generación.",
       links: [
-        { title: "Lista de fechas importantes", description: "Una guía semestre por semestre para juniors y seniors.", comingSoon: true },
-        { title: "Lo básico de Common App", description: "Lo que debes saber antes de comenzar tu solicitud.", comingSoon: true },
+        {
+          title: "Listas: tu camino a la universidad",
+          description: "Listas gratuitas año por año de Common App — desde middle school hasta senior year.",
+          href: "https://www.commonapp.org/plan/your-path-to-college",
+        },
+        {
+          title: "Guía de Common App para estudiantes de primer año",
+          description: "Cómo crear y enviar tu solicitud universitaria de primer año.",
+          href: "https://www.commonapp.org/apply/first-year-students",
+        },
+        {
+          title: "Comienza tu Common App",
+          description: "Crea una cuenta y aplica a más de 1,000 universidades en un solo lugar.",
+          href: "https://www.commonapp.org/",
+        },
+        {
+          title: "Kit de herramientas (EN + ES)",
+          description: "Recursos de Common App para estudiantes en inglés y español.",
+          href: "https://www.commonapp.org/apply/fy-toolkit",
+        },
+        {
+          title: "College Scorecard",
+          description: "Compara universidades por costo, graduación y resultados — del Departamento de Educación de EE. UU.",
+          href: "https://collegescorecard.ed.gov/",
+        },
+        {
+          title: "Registrarse para el SAT",
+          description: "Registro oficial del SAT a través de College Board.",
+          href: "https://satsuite.collegeboard.org/sat/registration",
+        },
+        {
+          title: "Registrarse para el ACT",
+          description: "Registro oficial del ACT, fechas y centros de examen.",
+          href: "https://www.act.org/content/act/en/products-and-services/the-act/registration.html",
+        },
       ],
     },
     {
@@ -638,8 +928,26 @@ export const resourceCategories = {
       title: "Ensayos y Cartas de Recomendación",
       description: "Consejos para ensayos personales, ensayos suplementarios y cartas de recomendación.",
       links: [
-        { title: "Cómo abordar tu ensayo personal", description: "Encontrar tu historia sin complicarlo demasiado.", comingSoon: true },
-        { title: "Pedir cartas de recomendación", description: "A quién pedir, cuándo pedir y cómo facilitarlo.", comingSoon: true },
+        {
+          title: "Preguntas del ensayo de Common App",
+          description: "Los temas del ensayo personal de este año — léelos antes de escribir.",
+          href: "https://www.commonapp.org/apply/essay-prompts",
+        },
+        {
+          title: "Guía para consejeros y recomendadores",
+          description: "Cómo maestros y consejeros envían recomendaciones en Common App.",
+          href: "https://www.commonapp.org/counselors-and-recommenders",
+        },
+        {
+          title: "Guía de la solicitud de primer año",
+          description: "Recorrido de las secciones que completarás — incluyendo ensayos y formularios escolares.",
+          href: "https://www.commonapp.org/apply/first-year-students",
+        },
+        {
+          title: "Ayuda con solicitudes (Get Schooled)",
+          description: "Artículos gratis paso a paso sobre cómo aplicar a la universidad.",
+          href: "https://getschooled.com/journey/get-to-college/",
+        },
       ],
     },
     {
@@ -647,8 +955,51 @@ export const resourceCategories = {
       title: "Becas y Ayuda Financiera",
       description: "Encontrar y aplicar a becas como estudiante de primera generación.",
       links: [
-        { title: "Estrategias para buscar becas", description: "Dónde buscar y cómo mantenerte organizado/a.", comingSoon: true },
-        { title: "Lista de becas para primera generación", description: "Becas específicas para estudiantes de primera generación.", comingSoon: true },
+        {
+          title: "Búsqueda de becas BigFuture",
+          description: "Busca miles de becas en el sitio gratuito de College Board.",
+          href: "https://bigfuture.collegeboard.org/pay-for-college/scholarship-search",
+        },
+        {
+          title: "Búsqueda de becas GAfutures",
+          description: "Encuentra becas de Georgia y nacionales con la herramienta oficial de GAfutures.",
+          href: "https://www.gafutures.org/federal-aid-scholarships/scholarship-search/",
+        },
+        {
+          title: "Beca HOPE de Georgia",
+          description: "Información oficial sobre la beca HOPE — elegibilidad y cómo ayuda con la matrícula.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/hope-zell-miller-scholarships/hope-scholarship",
+        },
+        {
+          title: "Revisa tu GPA HOPE de secundaria",
+          description: "Consulta tu GPA HOPE en tu cuenta de GAfutures (estudiantes de secundaria en Georgia).",
+          href: "https://www.gafutures.org/hope-state-aid-programs/hope-zell-miller-scholarships/how-to-track-your-hope-academic-eligibility/my-high-school-hope-gpa/",
+        },
+        {
+          title: "Hispanic Scholarship Fund (HSF)",
+          description: "Becas y servicios de apoyo para estudiantes de herencia hispana.",
+          href: "https://www.hsf.net/",
+        },
+        {
+          title: "QuestBridge College Prep Scholars",
+          description: "Programa para juniors con alto rendimiento académico de familias de bajos ingresos.",
+          href: "https://www.questbridge.org/apply-to-college/programs/college-prep-scholars-program",
+        },
+        {
+          title: "Tipos de ayuda federal para estudiantes",
+          description: "Becas, grants, work-study y préstamos explicados por Federal Student Aid.",
+          href: "https://studentaid.gov/understand-aid/types",
+        },
+        {
+          title: "Beca Federal Pell Grant",
+          description: "Conoce la Pell Grant — ayuda gratuita que no se tiene que devolver.",
+          href: "https://studentaid.gov/understand-aid/types/grants/pell",
+        },
+        {
+          title: "Becas BigFuture",
+          description: "Completa pasos de planificación gratis para oportunidades de $500 y $40,000.",
+          href: "https://bigfuture.collegeboard.org/pay-for-college/bigfuture-scholarships",
+        },
       ],
     },
     {
@@ -656,8 +1007,31 @@ export const resourceCategories = {
       title: "Lo Básico de FAFSA",
       description: "Entender formularios de ayuda financiera, fechas límite y lo que las familias necesitan saber.",
       links: [
-        { title: "Resumen paso a paso de FAFSA", description: "Una explicación clara del proceso de ayuda financiera.", comingSoon: true },
-        { title: "FAFSA para familias hispanohablantes", description: "Términos clave y pasos explicados en español accesible.", comingSoon: true },
+        {
+          title: "Completar la FAFSA®",
+          description: "La solicitud oficial gratuita de ayuda federal — nunca pagues para llenarla.",
+          href: "https://studentaid.gov/h/apply-for-aid/fafsa",
+        },
+        {
+          title: "Crea tu cuenta de StudentAid.gov",
+          description: "Necesitas una cuenta (FSA ID) antes de que tú y tu padre/madre puedan completar la FAFSA.",
+          href: "https://studentaid.gov/fsa-id/create-account/launch",
+        },
+        {
+          title: "Cómo llenar el formulario FAFSA (Español)",
+          description: "Ayuda paso a paso en español de Ayuda Federal para Estudiantes.",
+          href: "https://studentaid.gov/es/apply-for-aid/fafsa/filling-out",
+        },
+        {
+          title: "How to fill out the FAFSA (English)",
+          description: "Guía oficial en inglés para completar el formulario.",
+          href: "https://studentaid.gov/apply-for-aid/fafsa/filling-out",
+        },
+        {
+          title: "Fechas límite de la FAFSA",
+          description: "Plazos federales, estatales y universitarios — aplica temprano para no perder ayuda.",
+          href: "https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines",
+        },
       ],
     },
     {
@@ -665,7 +1039,26 @@ export const resourceCategories = {
       title: "Dual Enrollment",
       description: "Obtener créditos universitarios mientras aún estás en la escuela secundaria.",
       links: [
-        { title: "¿Es dual enrollment para ti?", description: "Ventajas, desventajas y preguntas para tu consejero.", comingSoon: true },
+        {
+          title: "Dual Enrollment en Georgia (GAfutures)",
+          description: "Información oficial del programa en Georgia — elegibilidad, fondos y cómo aplicar.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/scholarships-grants/dual-enrollment/",
+        },
+        {
+          title: "Pasos para la solicitud de Dual Enrollment",
+          description: "Lo que estudiantes y familias deben completar en GAfutures.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/scholarships-grants/dual-enrollment/application-procedure",
+        },
+        {
+          title: "Directorio de cursos de Dual Enrollment",
+          description: "Explora los cursos aprobados del programa de Dual Enrollment en Georgia.",
+          href: "https://www.gafutures.org/checs/dualenrollment/decoursedirectory",
+        },
+        {
+          title: "¿Es dual enrollment para ti?",
+          description: "Ventajas, desventajas y preguntas para tu consejero.",
+          comingSoon: true,
+        },
       ],
     },
     {
@@ -673,8 +1066,46 @@ export const resourceCategories = {
       title: "Pasantías y Programas",
       description: "Roles de liderazgo, programas de verano y experiencias que fortalecen tu camino.",
       links: [
-        { title: "Cómo encontrar programas desde temprano", description: "Comenzar tu búsqueda antes del último año.", comingSoon: true },
-        { title: "Construir un currículum sólido", description: "Actividades y experiencias que importan.", comingSoon: true },
+        {
+          title: "Explorar universidades en Common App",
+          description: "Busca y conoce más de 1,000 universidades — ideal para armar tu lista desde temprano.",
+          href: "https://www.commonapp.org/explore",
+        },
+        {
+          title: "Planificación universitaria BigFuture",
+          description: "Herramientas gratuitas para explorar universidades, carreras y próximos pasos.",
+          href: "https://bigfuture.collegeboard.org/",
+        },
+        {
+          title: "Programas de QuestBridge",
+          description: "Oportunidades que conectan a estudiantes de alto rendimiento de bajos ingresos con universidades top.",
+          href: "https://www.questbridge.org/",
+        },
+        {
+          title: "Get Schooled — Camino a la universidad",
+          description: "Artículos, consejos y apoyo gratis sobre aplicar a la universidad.",
+          href: "https://getschooled.com/journey/get-to-college/",
+        },
+        {
+          title: "Trabajos para estudiantes de secundaria (Get Schooled)",
+          description: "Dónde buscar, qué necesitas y cómo armar tu primer currículum.",
+          href: "https://getschooled.com/",
+        },
+        {
+          title: "AP Student (College Board)",
+          description: "Recursos oficiales para cursos y exámenes Advanced Placement.",
+          href: "https://apstudents.collegeboard.org/",
+        },
+        {
+          title: "Exenciones de pago del SAT",
+          description: "Averigua si calificas para tomar el SAT gratis y acceder a otros beneficios de College Board.",
+          href: "https://satsuite.collegeboard.org/sat/registration/fee-waivers",
+        },
+        {
+          title: "College Scorecard",
+          description: "Investiga universidades antes de aplicar — costos, tasas de graduación y datos de ingresos.",
+          href: "https://collegescorecard.ed.gov/",
+        },
       ],
     },
     {
@@ -682,7 +1113,21 @@ export const resourceCategories = {
       title: "Oportunidades de Investigación",
       description: "Involucrarse en investigación como estudiante universitario.",
       links: [
-        { title: "Encontrar laboratorios de investigación", description: "Cómo contactar y comenzar.", comingSoon: true },
+        {
+          title: "Investigación de pregrado en Georgia Tech",
+          description: "Oportunidades de investigación en el campus y cómo involucrarte en GT.",
+          href: "https://undergradresearch.gatech.edu/",
+        },
+        {
+          title: "Fondos para investigación de pregrado en GT",
+          description: "Premios PURA y otras opciones de financiamiento para estudiantes investigadores.",
+          href: "https://undergradresearch.gatech.edu/funding/",
+        },
+        {
+          title: "NSF Research Experiences for Undergraduates (REU)",
+          description: "Busca programas de investigación de verano en universidades de EE. UU.",
+          href: "https://www.nsf.gov/crssprgm/reu/reu_search.cfm",
+        },
       ],
     },
     {
@@ -690,8 +1135,31 @@ export const resourceCategories = {
       title: "Pre-Medicina / Pre-Salud",
       description: "Navegar la ruta pre-salud como estudiante de primera generación.",
       links: [
-        { title: "Lo básico de pre-medicina en Georgia Tech", description: "Planificación de cursos y primeros pasos.", comingSoon: true },
-        { title: "Experiencia clínica y shadowing", description: "Cómo encontrar oportunidades y qué esperar.", comingSoon: true },
+        {
+          title: "Asesoría Pre-Health en Georgia Tech",
+          description: "Asesoría oficial de GT para pre-medicina, odontología, farmacia y otras carreras de salud.",
+          href: "https://www.prehealth.gatech.edu/",
+        },
+        {
+          title: "AAMC Aspiring Docs",
+          description: "Guías e historias gratis para comenzar el camino hacia la medicina.",
+          href: "https://students-residents.aamc.org/aspiring-docs/aspiring-docs",
+        },
+        {
+          title: "Centro AAMC para estudiantes y residentes",
+          description: "Recursos confiables para explorar carreras médicas, solicitudes y preparación.",
+          href: "https://students-residents.aamc.org/",
+        },
+        {
+          title: "Preparación para el MCAT (AAMC)",
+          description: "Información oficial sobre cómo prepararte para el examen MCAT.",
+          href: "https://students-residents.aamc.org/mcat-prep/mcat-prep",
+        },
+        {
+          title: "Catálogo de GT: programas preprofesionales",
+          description: "Cómo Georgia Tech aborda las rutas pre-salud (y otras rutas preprofesionales).",
+          href: "https://catalog.gatech.edu/academics/special-academic-programs/preprofessional-programs/",
+        },
       ],
     },
     {
@@ -699,8 +1167,26 @@ export const resourceCategories = {
       title: "Habilidades de Estudio y Vida Universitaria",
       description: "Estrategias que funcionan, manejo del tiempo y adaptación al campus.",
       links: [
-        { title: "Estrategias de estudio que realmente funcionan", description: "Lo que aprendí después de probar y equivocarme.", comingSoon: true },
-        { title: "Encontrar comunidad en el campus", description: "Clubes, organizaciones y redes de apoyo.", comingSoon: true },
+        {
+          title: "Get Schooled — Empezar la universidad con fuerza",
+          description: "Consejos para orientación, clases y finalizar la ayuda financiera como estudiante nuevo.",
+          href: "https://getschooled.com/journey/get-to-college/",
+        },
+        {
+          title: "Khan Academy",
+          description: "Práctica y lecciones gratis para muchas materias de secundaria y universidad.",
+          href: "https://www.khanacademy.org/",
+        },
+        {
+          title: "Centro de Carreras de Georgia Tech",
+          description: "Pasantías, orientación profesional y recursos de empleo para estudiantes de GT.",
+          href: "https://career.gatech.edu/",
+        },
+        {
+          title: "Ayuda Federal — Administra tu ayuda",
+          description: "Entiende becas, préstamos y lo básico del pago una vez que estás en la universidad.",
+          href: "https://studentaid.gov/manage-loans",
+        },
       ],
     },
     {
@@ -708,8 +1194,36 @@ export const resourceCategories = {
       title: "Recursos en Español para Familias",
       description: "Información diseñada para padres y familias que dominan el español.",
       links: [
-        { title: "Guía para padres: apoyar a su estudiante", description: "Cómo apoyar el camino universitario de su hijo/a.", comingSoon: true },
-        { title: "Términos clave de ayuda financiera", description: "Vocabulario esencial explicado en español.", comingSoon: true },
+        {
+          title: "Common App para familias",
+          description: "Consejos para familias que apoyan a sus estudiantes en el proceso de solicitud.",
+          href: "https://www.commonapp.org/family",
+        },
+        {
+          title: "Cómo llenar el formulario FAFSA",
+          description: "Guía oficial en español de Ayuda Federal para Estudiantes.",
+          href: "https://studentaid.gov/es/apply-for-aid/fafsa/filling-out",
+        },
+        {
+          title: "Fechas límite de la FAFSA",
+          description: "Plazos importantes para no perder ayuda federal o estatal.",
+          href: "https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines",
+        },
+        {
+          title: "Tipos de ayuda federal para estudiantes",
+          description: "Becas, grants, work-study y préstamos explicados claramente.",
+          href: "https://studentaid.gov/understand-aid/types",
+        },
+        {
+          title: "Beca HOPE de Georgia",
+          description: "Información oficial de la beca HOPE para estudiantes de Georgia.",
+          href: "https://www.gafutures.org/hope-state-aid-programs/hope-zell-miller-scholarships/hope-scholarship",
+        },
+        {
+          title: "College Scorecard",
+          description: "Compara universidades por costo y resultados antes de decidir.",
+          href: "https://collegescorecard.ed.gov/",
+        },
       ],
     },
   ] as ResourceCategory[],
