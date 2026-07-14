@@ -1,9 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { SocialLinks } from "./SocialLinks";
-import { getAlternateLocaleHref } from "@/lib/locale-routes";
 import { footerContent, navLinksEn, navLinksEs, siteConfig } from "@/lib/site-data";
 
 type FooterProps = {
@@ -11,12 +7,9 @@ type FooterProps = {
 };
 
 export function Footer({ locale = "en" }: FooterProps) {
-  const pathname = usePathname();
   const content = footerContent[locale];
   const navLinks = locale === "es" ? navLinksEs : navLinksEn;
   const homeHref = locale === "es" ? "/bienvenidos" : "/";
-  const altHref = getAlternateLocaleHref(pathname);
-  const altLabel = locale === "es" ? "English" : "Español";
   const linksHref = locale === "es" ? "/es/enlaces" : "/links";
   const linksLabel = locale === "es" ? "Enlaces" : "Link in Bio";
 
@@ -67,7 +60,12 @@ export function Footer({ locale = "en" }: FooterProps) {
               <li>
                 <Link
                   href="/"
-                  className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
+                  className={`text-sm transition-colors ${
+                    locale === "en"
+                      ? "font-medium text-inverse-foreground"
+                      : "text-footer-muted hover:text-inverse-foreground"
+                  }`}
+                  aria-current={locale === "en" ? "true" : undefined}
                 >
                   English
                 </Link>
@@ -75,17 +73,14 @@ export function Footer({ locale = "en" }: FooterProps) {
               <li>
                 <Link
                   href="/bienvenidos"
-                  className="text-sm text-footer-muted transition-colors hover:text-inverse-foreground"
+                  className={`text-sm transition-colors ${
+                    locale === "es"
+                      ? "font-medium text-inverse-foreground"
+                      : "text-footer-muted hover:text-inverse-foreground"
+                  }`}
+                  aria-current={locale === "es" ? "true" : undefined}
                 >
                   Español
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={altHref}
-                  className="text-sm text-accent transition-colors hover:text-accent-soft"
-                >
-                  {altLabel} →
                 </Link>
               </li>
             </ul>

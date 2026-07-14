@@ -35,20 +35,11 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.tagline,
-    images: [
-      {
-        url: "/images/about/stacy-lab-coat.png",
-        width: 768,
-        height: 1024,
-        alt: `${siteConfig.creator} — ${siteConfig.name}`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.tagline,
-    images: ["/images/about/stacy-lab-coat.png"],
   },
 };
 

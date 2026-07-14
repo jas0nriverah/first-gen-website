@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#0A0A0A"/>
-  <text x="16" y="21" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">FGC</text>
+  <rect width="32" height="32" rx="10" fill="#F6EBE6"/>
+  <rect x="2" y="2" width="28" height="28" rx="8" fill="#D98B7E"/>
+  <text
+    x="16"
+    y="21"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="10"
+    font-weight="700"
+    fill="#FAF7F5"
+  >FGC</text>
 </svg>

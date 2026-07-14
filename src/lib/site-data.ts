@@ -19,7 +19,6 @@ export const siteConfig = {
   // Social profiles — edit URLs here
   social: {
     linkedin: "https://www.linkedin.com/in/stacylomeli/",
-    instagram: "https://www.instagram.com/sta.acyy_/",
     tiktok: "https://www.tiktok.com/@staccy.lomeli",
   },
   tagline:
@@ -279,11 +278,6 @@ export const socialLinks = [
     platform: "linkedin" as const,
     href: siteConfig.social.linkedin,
     label: "LinkedIn",
-  },
-  {
-    platform: "instagram" as const,
-    href: siteConfig.social.instagram,
-    label: "Instagram",
   },
   {
     platform: "tiktok" as const,
