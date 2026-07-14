@@ -4,59 +4,59 @@
 
 @layer base {
   :root {
-    --color-page: #ffffff;
+    --color-page: #fbf8f6;
     --color-card: #ffffff;
-    --color-text: #0a0a0a;
-    --color-text-soft: #262626;
-    --color-muted: #737373;
-    --color-muted-light: #a3a3a3;
-    --color-surface: #f5f5f5;
-    --color-surface-warm: #fafafa;
-    --color-border: #e5e5e5;
-    --color-border-dark: #d4d4d4;
-    --color-accent: #ff5c35;
-    --color-accent-soft: #ff7a5c;
-    --color-accent-muted: #fff0eb;
-    --color-inverse: #0a0a0a;
-    --color-inverse-text: #ffffff;
-    --color-footer-muted: #a3a3a3;
-    --color-footer-subtle: #737373;
-    --color-btn-primary: #0a0a0a;
-    --color-btn-primary-hover: #262626;
-    --color-btn-primary-text: #ffffff;
-    --color-header-bg: rgba(255, 255, 255, 0.8);
-    --color-dot-grid: #e5e5e5;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-    --shadow-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+    --color-text: #2f2c2a;
+    --color-text-soft: #4a4542;
+    --color-muted: #7d7671;
+    --color-muted-light: #a39c96;
+    --color-surface: #f3eeea;
+    --color-surface-warm: #f7f1ed;
+    --color-border: #ebe3dd;
+    --color-border-dark: #ddd4cd;
+    --color-accent: #d98b7e;
+    --color-accent-soft: #c97a6d;
+    --color-accent-muted: #f6ebe6;
+    --color-inverse: #3a3532;
+    --color-inverse-text: #faf7f5;
+    --color-footer-muted: #c4bdb7;
+    --color-footer-subtle: #9e968f;
+    --color-btn-primary: #4a4542;
+    --color-btn-primary-hover: #3a3532;
+    --color-btn-primary-text: #faf7f5;
+    --color-header-bg: rgba(251, 248, 246, 0.85);
+    --color-dot-grid: #e8dfd8;
+    --shadow-sm: 0 1px 2px 0 rgba(47, 44, 42, 0.04);
+    --shadow-card: 0 2px 8px -2px rgba(47, 44, 42, 0.06), 0 1px 3px rgba(47, 44, 42, 0.04);
+    --shadow-hover: 0 8px 20px -6px rgba(47, 44, 42, 0.1);
   }
 
   .dark {
-    --color-page: #0a0a0a;
-    --color-card: #141414;
-    --color-text: #f5f5f5;
-    --color-text-soft: #e5e5e5;
-    --color-muted: #a3a3a3;
-    --color-muted-light: #737373;
-    --color-surface: #1a1a1a;
-    --color-surface-warm: #111111;
-    --color-border: #262626;
-    --color-border-dark: #404040;
-    --color-accent: #ff6b4a;
-    --color-accent-soft: #ff8a6b;
-    --color-accent-muted: #2a1a15;
-    --color-inverse: #1a1a1a;
-    --color-inverse-text: #f5f5f5;
-    --color-footer-muted: #a3a3a3;
-    --color-footer-subtle: #525252;
-    --color-btn-primary: #f5f5f5;
-    --color-btn-primary-hover: #e5e5e5;
-    --color-btn-primary-text: #0a0a0a;
-    --color-header-bg: rgba(10, 10, 10, 0.85);
-    --color-dot-grid: #262626;
+    --color-page: #1c1a18;
+    --color-card: #262320;
+    --color-text: #f5f1ee;
+    --color-text-soft: #e8e2dc;
+    --color-muted: #b0a89f;
+    --color-muted-light: #8a827a;
+    --color-surface: #2e2a26;
+    --color-surface-warm: #221f1c;
+    --color-border: #3d3833;
+    --color-border-dark: #524b45;
+    --color-accent: #e0a095;
+    --color-accent-soft: #ebada1;
+    --color-accent-muted: #3a2c28;
+    --color-inverse: #2a2623;
+    --color-inverse-text: #f5f1ee;
+    --color-footer-muted: #b0a89f;
+    --color-footer-subtle: #7a736c;
+    --color-btn-primary: #f0ebe6;
+    --color-btn-primary-hover: #e0d9d2;
+    --color-btn-primary-text: #2f2c2a;
+    --color-header-bg: rgba(28, 26, 24, 0.88);
+    --color-dot-grid: #3d3833;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.2);
-    --shadow-hover: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 20px -6px rgba(0, 0, 0, 0.45);
   }
 
   /* High-contrast mode (light) — maximizes legibility for low-vision users */
@@ -71,8 +71,8 @@
     --color-surface-warm: #ffffff;
     --color-border: #000000;
     --color-border-dark: #000000;
-    --color-accent: #b32400;
-    --color-accent-soft: #b32400;
+    --color-accent: #a84538;
+    --color-accent-soft: #a84538;
     --color-accent-muted: #ffe4dc;
     --color-inverse: #000000;
     --color-inverse-text: #ffffff;
@@ -97,8 +97,8 @@
     --color-surface-warm: #000000;
     --color-border: #ffffff;
     --color-border-dark: #ffffff;
-    --color-accent: #ff9a7a;
-    --color-accent-soft: #ff9a7a;
+    --color-accent: #ffb5a8;
+    --color-accent-soft: #ffb5a8;
     --color-accent-muted: #3a2018;
     --color-inverse: #ffffff;
     --color-inverse-text: #000000;
@@ -140,15 +140,15 @@
   }
 
   .card {
-    @apply rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:border-border-dark hover:shadow-hover sm:p-7;
+    @apply rounded-3xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-border-dark hover:shadow-hover sm:p-7;
   }
 
   .card-static {
-    @apply rounded-2xl border border-border bg-card p-6 sm:p-7;
+    @apply rounded-3xl border border-border bg-card p-6 sm:p-7;
   }
 
   .badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-border bg-surface-warm px-3.5 py-1.5 text-xs font-medium text-muted;
+    @apply inline-flex items-center gap-2 rounded-full border border-border bg-accent-muted px-3.5 py-1.5 text-xs font-medium text-ink-soft;
   }
 
   .badge-soon {
@@ -156,18 +156,18 @@
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.15em] text-muted;
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-accent;
   }
 
   .link-bio-btn {
-    @apply rounded-xl border border-border bg-card px-5 py-4 text-center text-sm font-medium text-ink transition-all duration-200 hover:border-border-dark hover:shadow-hover;
+    @apply rounded-2xl border border-border bg-card px-5 py-4 text-center text-sm font-medium text-ink shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-border-dark hover:shadow-hover;
   }
 
   .link-bio-btn-primary {
-    @apply rounded-xl bg-btn-primary px-5 py-4 text-center text-sm font-medium text-btn-primary-text transition-all duration-200 hover:bg-btn-primary-hover;
+    @apply rounded-2xl bg-btn-primary px-5 py-4 text-center text-sm font-medium text-btn-primary-text transition-all duration-200 hover:bg-btn-primary-hover;
   }
 
   .cta-inverse {
-    @apply rounded-2xl bg-inverse p-10 text-center text-inverse-foreground sm:p-12;
+    @apply rounded-3xl bg-inverse p-10 text-center text-inverse-foreground sm:p-12;
   }
 }

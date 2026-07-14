@@ -14,7 +14,7 @@ export function MobileStartFab({ locale = "en" }: MobileStartFabProps) {
   return (
     <Link
       href={href}
-      className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-medium text-white shadow-hover transition-transform hover:scale-105 lg:hidden"
+      className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-hover transition-all hover:-translate-y-0.5 hover:bg-accent-soft lg:hidden"
       aria-label={label}
     >
       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

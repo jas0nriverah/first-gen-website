@@ -18,7 +18,7 @@ export function SectionHeading({
       {eyebrow && (
         <p className={`eyebrow mb-3 ${centered ? "mx-auto" : ""}`}>{eyebrow}</p>
       )}
-      <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:text-4xl">
+      <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
         {title}
       </h2>
       {subtitle && (

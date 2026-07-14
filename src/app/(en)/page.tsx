@@ -73,8 +73,8 @@ export default function HomePage() {
 
       <section className="section-padding">
         <div className="section-container">
-          <div className="mx-auto max-w-xl rounded-2xl border border-border bg-surface-warm p-10 text-center sm:p-12">
-            <p className="text-base leading-relaxed text-ink sm:text-lg">
+          <div className="mx-auto max-w-xl rounded-3xl border border-border bg-accent-muted/70 p-10 text-center shadow-sm sm:p-12">
+            <p className="font-display text-lg leading-relaxed text-ink sm:text-xl">
               {content.welcomeClosing}
             </p>
             <div className="mt-8">

@@ -39,7 +39,7 @@ export function PathwayCard({
 }: PathwayCardProps) {
   return (
     <Link href={href} className="card group block h-full">
-      <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-surface text-ink transition-colors group-hover:bg-accent-muted group-hover:text-accent">
+      <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-accent-muted text-accent transition-colors group-hover:bg-accent group-hover:text-white">
         <svg
           className="h-5 w-5"
           fill="none"
@@ -51,9 +51,9 @@ export function PathwayCard({
           {icons[icon]}
         </svg>
       </div>
-      <h3 className="mb-2 text-base font-semibold text-ink">{title}</h3>
+      <h3 className="mb-2 font-display text-lg font-semibold text-ink">{title}</h3>
       <p className="text-sm leading-relaxed text-muted">{description}</p>
-      <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-ink">
+      <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent">
         {exploreLabel}
         <svg
           className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"

@@ -25,7 +25,7 @@ export function Footer({ locale = "en" }: FooterProps) {
       <div className="section-container py-16 sm:py-20">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href={homeHref} className="text-base font-semibold text-inverse-foreground">
+            <Link href={homeHref} className="font-display text-lg font-semibold text-inverse-foreground">
               {siteConfig.name}
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-footer-muted">

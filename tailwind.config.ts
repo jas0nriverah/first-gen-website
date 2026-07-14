@@ -34,6 +34,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       boxShadow: {
         sm: "var(--shadow-sm)",
@@ -41,12 +42,17 @@ const config: Config = {
         hover: "var(--shadow-hover)",
       },
       animation: {
-        "fade-up": "fadeUp 0.5s ease-out forwards",
+        "fade-up": "fadeUp 0.55s ease-out forwards",
+        "soft-float": "softFloat 7s ease-in-out infinite",
       },
       keyframes: {
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        softFloat: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
         },
       },
     },

@@ -16,7 +16,9 @@ export function FamilyCallout({ locale = "en" }: FamilyCalloutProps) {
             <p className="eyebrow mb-2">
               {locale === "es" ? "Para familias" : "For families"}
             </p>
-            <h2 className="text-lg font-semibold text-ink sm:text-xl">{content.title}</h2>
+            <h2 className="font-display text-xl font-semibold text-ink sm:text-2xl">
+              {content.title}
+            </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
               {content.text}
             </p>

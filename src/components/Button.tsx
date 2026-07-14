@@ -11,9 +11,12 @@ type ButtonProps = {
 };
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-btn-primary text-btn-primary-text hover:bg-btn-primary-hover",
-  secondary: "bg-accent text-white hover:bg-accent-soft",
-  outline: "border border-border bg-card text-ink hover:border-border-dark",
+  primary:
+    "bg-btn-primary text-btn-primary-text shadow-sm hover:bg-btn-primary-hover hover:-translate-y-0.5",
+  secondary:
+    "bg-accent text-white shadow-sm hover:bg-accent-soft hover:-translate-y-0.5",
+  outline:
+    "border border-border bg-card text-ink shadow-sm hover:border-border-dark hover:-translate-y-0.5",
   ghost: "text-muted hover:text-ink",
 };
 
@@ -25,7 +28,7 @@ export function Button({
   external = false,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-200 sm:px-6 sm:py-3";
+    "inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-200 sm:px-6 sm:py-3";
 
   const classes = `${base} ${variants[variant]} ${className}`;
 
